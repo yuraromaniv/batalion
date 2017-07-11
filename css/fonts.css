@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Gabriola";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Gabriola.ttf");
+}
+
+@font-face {
+  font-family: "MyriadProRegular";
+  font-style: normal;
+  font-weight: normal;
+    src: url("../fonts/MyriadProRegular.ttf");
+
+}
+
+@font-face {
+  font-family: "Bauhaus";
+  font-style: normal;
+  font-weight: normal;
+    src: url("../fonts/Bauhaus.ttf");
+
+}
+

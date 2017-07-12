@@ -4,7 +4,7 @@
     });
 
 $('.carousel').carousel({
-    padding: 170   
+    padding: 1570   
 });
 autoplay()   
 function autoplay() {

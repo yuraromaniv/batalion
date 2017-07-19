@@ -40,7 +40,7 @@
             ),
             'map_meta_cap' => true,
             'hierarchical' => true,
-            'supports' => array( 'title', 'thumbnail', 'editor', 'revisions' ), // 'author', 'comments'
+            'supports' => array( 'title', 'thumbnail', 'editor', 'revisions', 'comments' ), // 'author'
             //'taxonomies' => array( 'post_tag', 'category' ), 
             'has_archive' => true,
             'rewrite' => true,
@@ -92,7 +92,7 @@
             ),
             'map_meta_cap' => true,
             'hierarchical' => true,
-            'supports' => array( 'title', 'thumbnail', 'editor', 'revisions' ), // 'author', 'comments'
+            'supports' => array( 'title', 'thumbnail', 'editor', 'revisions', 'comments' ), // 'author',
             //'taxonomies' => array( 'post_tag', 'category' ), 
             'has_archive' => true,
             'rewrite' => true,
@@ -144,7 +144,7 @@
             ),
             'map_meta_cap' => true,
             'hierarchical' => true,
-            'supports' => array( 'title', 'thumbnail', 'editor', 'revisions' ), // 'author', 'comments'
+            'supports' => array( 'title', 'thumbnail', 'editor', 'revisions', 'comments' ), // 'author', 
             //'taxonomies' => array( 'post_tag', 'category' ), 
             'has_archive' => true,
             'rewrite' => true,
@@ -198,7 +198,7 @@
             'hierarchical' => true,
             'supports' => array( 'title', 'thumbnail', 'editor', 'revisions' ), // 'author', 'comments'
             //'taxonomies' => array( 'post_tag', 'category' ), 
-            'has_archive' => true,
+            'has_archive' => false,
             'rewrite' => true,
             'query_var' => true,
             'can_export' => true
@@ -246,7 +246,7 @@
                 'publish_posts' => 'publish_teams',
                 'read_private_posts' => 'read_private_teams',
             ),
-            'map_meta_cap' => true,
+            'map_meta_cap' => false,
             'hierarchical' => true,
             'supports' => array( 'title', 'thumbnail', 'editor', 'revisions' ), // 'author', 'comments'
             //'taxonomies' => array( 'post_tag', 'category' ), 
@@ -302,7 +302,7 @@
             'hierarchical' => true,
             'supports' => array( 'title', 'thumbnail', 'editor', 'revisions' ), // 'author', 'comments'
             //'taxonomies' => array( 'post_tag', 'category' ), 
-            'has_archive' => true,
+            'has_archive' => false,
             'rewrite' => true,
             'query_var' => true,
             'can_export' => true

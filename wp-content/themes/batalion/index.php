@@ -1,13 +1,16 @@
 <?php 
-    //header
-    get_header();
+  //header
+  get_header();
 
-    //content-home
-    get_template_part('/template-parts/content', 'home');
+  //content-home
+  get_template_part('/template-parts/content', 'home');
     
-    //content-footer
-    get_template_part('/template-parts/content', 'footer');
+  //our team
+  get_template_part('/template-parts/content', 'our-team');
 
-    //footer
-    get_footer();
+  //content-footer
+  get_template_part('/template-parts/content', 'footer');
+
+  //footer
+  get_footer();
 ?>

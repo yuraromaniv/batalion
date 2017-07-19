@@ -96,7 +96,14 @@
   </style>
 </head>
 <body>
-  <header>
+  <?php
+    if (is_user_logged_in() ) {
+      echo '<header style="margin-top:32px;">';
+    }
+    else {
+      echo '<header>';
+    }
+  ?>
     <div class="pre-post">  </div>
     <div class="main-header row center container">
       <div class="col l4 m6 s12">
@@ -116,20 +123,20 @@
       <ul class="hide-on-med-and-down nav-list">
         <li><a href="<?php echo get_home_url(); ?>">Головна</a></li>
         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Про нас<i class="material-icons right more-icon">arrow_drop_down</i></a></li>
-        <li><a href="badges.html">Новини</a></li>
-        <li><a href="badges.html">Блог</a></li>
-        <li><a href="badges.html">Членство</a></li>
-        <li><a href="badges.html">Бібліотека</a></li>
-        <li><a href="badges.html">Обговорення</a></li>
-        <li><a href="badges.html">Контакти</a></li>
+        <li><a href="<?php echo get_post_type_archive_link('events'); ?>">Події</a></li>
+        <li><a href="<?php echo get_post_type_archive_link('blogs'); ?>">Блог</a></li>
+        <li><a href="<?php the_permalink(50); ?>">Членство</a></li>
+        <li><a href="<?php the_permalink(45); ?>">Бібліотека</a></li>
+        <li><a href="<?php echo get_post_type_archive_link('discussions'); ?>">Обговорення</a></li>
+        <li><a href="<?php the_permalink(37); ?>">Контакти</a></li>
       </ul>
     </div>
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
-      <li><a href="#!">one</a></li>
-      <li><a href="#!">two</a></li>
+      <li><a href="<?php the_permalink(58); ?>">Наші погляди</a></li>
+      <li><a href="<?php the_permalink(69); ?>">Аналіз сучасого стану</a></li>
       <li class="divider"></li>
-      <li><a href="#!">three</a></li>
+      <li><a href="<?php the_permalink(40); ?>">Про нас</a></li>
     </ul>
     <div class="pre-post">  </div>
   </header>

@@ -30,6 +30,10 @@
   </footer>
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <!--Форма "СТАТИ ЧЛЕНОМ" -->
+  <script src="<?php echo get_template_directory_uri(); ?>/js/become-member.js"></script>
+
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/node_modules/materialize-css/dist/js/materialize.min.js"></script>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jssor.slider-25.0.7.min.js"></script>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/init.js"></script>

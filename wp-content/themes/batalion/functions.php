@@ -12,9 +12,9 @@
 
   //function for display short content for posts
   function short_post_desc( $charlength ) {
-    //$excerpt = get_the_content();
+    //$excerpt = get_post_meta( $post->ID, 'опис', true );
     global $post;
-    $excerpt = get_post_meta( $post->ID, 'опис', true );
+    $excerpt = get_the_content();
     if ( mb_strlen( $excerpt ) > $charlength ) {
       $subex = mb_substr( $excerpt, 0, $charlength );
       return $subex . '...';
@@ -26,7 +26,8 @@
 
   //function for display short title for posts
   function short_post_title( $charlength ) {
-    $excerpt = get_the_title( $post_id );
+    global $post;
+    $excerpt = get_the_title( $post->ID );
     $excerpt = trim( $excerpt );
     if ( mb_strlen( $excerpt ) > $charlength ) {
       $subex = mb_substr( $excerpt, 0, $charlength );

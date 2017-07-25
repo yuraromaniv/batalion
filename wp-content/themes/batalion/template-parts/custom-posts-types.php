@@ -1,6 +1,6 @@
 <?php
+    // register custom posts types
 
-// register custom posts types
     function register_cpt_events() {
         $labels = array( 
             'name' => _x( 'Події', 'events' ),
@@ -246,7 +246,7 @@
                 'publish_posts' => 'publish_teams',
                 'read_private_posts' => 'read_private_teams',
             ),
-            'map_meta_cap' => false,
+            'map_meta_cap' => true,
             'hierarchical' => true,
             'supports' => array( 'title', 'thumbnail', 'editor', 'revisions' ), // 'author', 'comments'
             //'taxonomies' => array( 'post_tag', 'category' ), 
@@ -312,6 +312,109 @@
     }
     add_action( 'init', 'register_cpt_partners' );
 
-// end register custom posts types
 
+    function register_cpt_our_looks() {
+        $labels = array( 
+            'name' => _x( 'Наші погляди', 'our_looks' ),
+            'singular_name' => _x( 'Наш погляд', 'our_looks' ),
+            'add_new' => _x( 'Додати наш погляд', 'our_looks' ),
+            'add_new_item' => _x( 'Додати новий погляд ', 'our_looks' ),
+            'edit_item' => _x( 'Редагувати наш погляд', 'our_looks' ),
+            'new_item' => _x( 'Нові погляди', 'our_looks' ),
+            'view_item' => _x( 'Переглянути', 'our_looks' ),
+            'search_items' => _x( 'Пошук', 'our_looks' ),
+            'not_found' => _x( 'Поглядів не знайдено', 'our_looks' ),
+            'not_found_in_trash' => _x( 'Поглядів в корзині не знайдено', 'our_looks' ),
+            'parent_item_colon' => _x( 'Батьківський елемент', 'our_looks' ),
+            'all_items' => _x( 'Всі наші погляди', 'our_looks' ),
+            'name_admin_bar' => _x( 'Наші погляди', 'our_looks'),    //назва в адмін барі (тулбарі)
+        );
+        $args = array( 
+            'labels' => $labels,
+            'description' => 'Наші погляди',
+            'public' => true,
+            'publicly_queryable' => true,
+            'exclude_from_search' => false,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'show_in_nav_menus' => true,
+            'menu_position' => 4,
+            'menu_icon' => 'dashicons-visibility',
+            'capability_type' => 'our_look',    //автоматично створює потрібні повноваження
+            'capabilities' => array(
+                'edit_post' => 'edit_our_look',
+                'read_post' => 'read_our_look',
+                'delete_post' => 'delete_our_look',
+                'edit_posts' => 'edit_our_looks',
+                'edit_others_posts' => 'edit_other_our_looks',  //дозволяє редагувати записи, які належать іншим авторам
+                'publish_posts' => 'publish_our_looks',
+                'read_private_posts' => 'read_private_our_looks',
+            ),
+            'map_meta_cap' => true,
+            'hierarchical' => true,
+            'supports' => array( 'title', 'editor' ), // 'author', 'thumbnail', 'revisions', 'comments'
+            //'taxonomies' => array( 'post_tag', 'category' ), 
+            'has_archive' => true,
+            'rewrite' => true,
+            'query_var' => true,
+            'can_export' => true
+            //'delete_with_user' => true    //видаляти записи цього типу, які належать користувачеві, який видаляється
+        );
+        register_post_type( 'our_looks', $args );
+    }
+    add_action( 'init', 'register_cpt_our_looks' );
+
+
+    function register_cpt_advices() {
+        $labels = array( 
+            'name' => _x( 'Корисні поради', 'advices' ),
+            'singular_name' => _x( 'Корисна порада', 'advices' ),
+            'add_new' => _x( 'Додати корисну пораду', 'advices' ),
+            'add_new_item' => _x( 'Додати нову корисну пораду ', 'advices' ),
+            'edit_item' => _x( 'Редагувати корисну пораду', 'advices' ),
+            'new_item' => _x( 'Нові корисні поради', 'advices' ),
+            'view_item' => _x( 'Переглянути', 'advices' ),
+            'search_items' => _x( 'Пошук', 'advices' ),
+            'not_found' => _x( 'Корисних порад не знайдено', 'advices' ),
+            'not_found_in_trash' => _x( 'Корисних порад в корзині не знайдено', 'advices' ),
+            'parent_item_colon' => _x( 'Батьківський елемент', 'advices' ),
+            'all_items' => _x( 'Всі корисні поради', 'advices' ),
+            'name_admin_bar' => _x( 'Корисні поради', 'advices'),    //назва в адмін барі (тулбарі)
+        );
+        $args = array( 
+            'labels' => $labels,
+            'description' => 'Корисні поради',
+            'public' => true,
+            'publicly_queryable' => true,
+            'exclude_from_search' => false,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'show_in_nav_menus' => true,
+            'menu_position' => 4,
+            'menu_icon' => 'dashicons-format-status',
+            'capability_type' => 'advice',    //автоматично створює потрібні повноваження
+            'capabilities' => array(
+                'edit_post' => 'edit_advice',
+                'read_post' => 'read_advice',
+                'delete_post' => 'delete_advice',
+                'edit_posts' => 'edit_advices',
+                'edit_others_posts' => 'edit_other_advices',  //дозволяє редагувати записи, які належать іншим авторам
+                'publish_posts' => 'publish_advices',
+                'read_private_posts' => 'read_private_advices',
+            ),
+            'map_meta_cap' => true,
+            'hierarchical' => true,
+            'supports' => array( 'title', 'editor' ), // 'author', 'thumbnail', 'revisions', 'comments'
+            //'taxonomies' => array( 'post_tag', 'category' ), 
+            'has_archive' => true,
+            'rewrite' => true,
+            'query_var' => true,
+            'can_export' => true
+            //'delete_with_user' => true    //видаляти записи цього типу, які належать користувачеві, який видаляється
+        );
+        register_post_type( 'advices', $args );
+    }
+    add_action( 'init', 'register_cpt_advices' );
+
+    // end register custom posts types
 ?>

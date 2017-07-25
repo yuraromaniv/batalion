@@ -4,14 +4,14 @@
   <title>
     <?php echo wp_get_document_title(); ?>
   </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"/>
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/node_modules/materialize-css/dist/css/materialize.min.css" />
   <link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css"/>
   <link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/fonts.css"/>
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"/>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
   <style>
     @media screen and (max-width: 768px) {
       #jssor_1 {

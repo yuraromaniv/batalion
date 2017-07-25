@@ -94,7 +94,6 @@
     <a class="waves-effect waves-light btn more-btn red">Більше блогів</a>
   </div>
 </div>
-<div class="pre-post"></div>
 
 <?php
   //our team

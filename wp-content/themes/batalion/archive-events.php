@@ -3,7 +3,6 @@
   get_header();
 ?>
 
-<div class="pre-post">  </div>
 <section class="news&blogs container">
   <div style="margin-bottom: 0" class="row">
     <div class="col l8 m12 s12 border-color">

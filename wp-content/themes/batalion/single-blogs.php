@@ -33,16 +33,16 @@
       </div>
       <div class="iframe-block col m12 s12 l12">
         <iframe src="https://www.youtube.com/embed/k27PXDZZgs4" allowfullscreen></iframe>
-        <div class="iframe-desc">
+        <a href="#"><div class="iframe-desc">
           Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-        </div>
+        </div></a>
         <div class="iframe-date">29 липня 2017</div>
       </div>
       <div class="iframe-block col m12 s12 l12">
         <iframe src="https://www.youtube.com/embed/k27PXDZZgs4" allowfullscreen></iframe>
-        <div class="iframe-desc">
+        <a href="#"><div class="iframe-desc">
           Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-        </div>
+        </div></a>
         <div class="iframe-date">29 липня 2017</div>
       </div>
     </div>

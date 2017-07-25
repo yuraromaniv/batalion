@@ -4,7 +4,7 @@ var gulp = require('gulp'), //підключення gulp
 gulp.task('sass', function() { //створення таску 'sass'
 	return gulp.src(['sass/*.sass', 'sass/*.scss']) //вибір файлів
 		.pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)) //перетворення sass в css
-		.pipe(gulp.dest('css')) // вигруження результату в папку css
+		.pipe(gulp.dest('../css')) // вигруження результату в папку css
 });
 
 gulp.task('watch', function() {

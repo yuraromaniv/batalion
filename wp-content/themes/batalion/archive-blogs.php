@@ -9,84 +9,84 @@
   <div class="col l4 m6 s12">
     <iframe class="param" src="https://www.youtube.com/embed/BAP4r1yuntg" allowfullscreen></iframe>
     <div class="blogs-desc">
-      <div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div>
+      <a href="#"><div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div></a>
       <div class="blog-date">6 липня 2017</div>
     </div>
   </div>
   <div class="col l4 m6 s12">
     <iframe class="param" src="https://www.youtube.com/embed/BAP4r1yuntg" allowfullscreen></iframe>
     <div class="blogs-desc">
-      <div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div>
+      <a href="#"><div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div></a>
       <div class="blog-date">6 липня 2017</div>
     </div>
   </div>
   <div class="col l4 m6 s12">
     <iframe class="param" src="https://www.youtube.com/embed/BAP4r1yuntg" allowfullscreen></iframe>
     <div class="blogs-desc">
-      <div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div>
+      <a href="#"><div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div></a>
       <div class="blog-date">6 липня 2017</div>
     </div>
   </div>
   <div class="col l4 m6 s12">
     <iframe class="param" src="https://www.youtube.com/embed/BAP4r1yuntg" allowfullscreen></iframe>
     <div class="blogs-desc">
-      <div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div>
+      <a href="#"><div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div></a>
       <div class="blog-date">6 липня 2017</div>
     </div>
   </div>
   <div class="col l4 m6 s12">
     <iframe class="param" src="https://www.youtube.com/embed/BAP4r1yuntg" allowfullscreen></iframe>
     <div class="blogs-desc">
-      <div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div>
+      <a href="#"><div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div></a>
       <div class="blog-date">6 липня 2017</div>
     </div>
   </div>
   <div class="col l4 m6 s12">
     <iframe class="param" src="https://www.youtube.com/embed/BAP4r1yuntg" allowfullscreen></iframe>
     <div class="blogs-desc">
-      <div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div>
+      <a href="#"><div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div></a>
       <div class="blog-date">6 липня 2017</div>
     </div>
   </div>
   <div class="col l4 m6 s12">
     <iframe class="param" src="https://www.youtube.com/embed/BAP4r1yuntg" allowfullscreen></iframe>
     <div class="blogs-desc">
-      <div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div>
+      <a href="#"><div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div></a>
       <div class="blog-date">6 липня 2017</div>
     </div>
   </div>
   <div class="col l4 m6 s12">
     <iframe class="param" src="https://www.youtube.com/embed/BAP4r1yuntg" allowfullscreen></iframe>
     <div class="blogs-desc">
-      <div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div>
+      <a href="#"><div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div></a>
       <div class="blog-date">6 липня 2017</div>
     </div>
   </div>
   <div class="col l4 m6 s12">
     <iframe class="param" src="https://www.youtube.com/embed/BAP4r1yuntg" allowfullscreen></iframe>
     <div class="blogs-desc">
-      <div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div>
+      <a href="#"><div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div></a>
       <div class="blog-date">6 липня 2017</div>
     </div>
   </div>
   <div class="col l4 m6 s12">
     <iframe class="param" src="https://www.youtube.com/embed/BAP4r1yuntg" allowfullscreen></iframe>
     <div class="blogs-desc">
-      <div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div>
+      <a href="#"><div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div></a>
       <div class="blog-date">6 липня 2017</div>
     </div>
   </div>
   <div class="col l4 m6 s12">
     <iframe class="param" src="https://www.youtube.com/embed/BAP4r1yuntg" allowfullscreen></iframe>
     <div class="blogs-desc">
-      <div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div>
+      <a href="#"><div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div></a>
       <div class="blog-date">6 липня 2017</div>
     </div>
   </div>
   <div class="col l4 m6 s12">
     <iframe class="param" src="https://www.youtube.com/embed/BAP4r1yuntg" allowfullscreen></iframe>
     <div class="blogs-desc">
-      <div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div>
+      <a href="#"><div class="blog-title">Lorem ipsum dolor sit amet, consec tetur adi pisicing elit.</div></a>
       <div class="blog-date">6 липня 2017</div>
     </div>
   </div>

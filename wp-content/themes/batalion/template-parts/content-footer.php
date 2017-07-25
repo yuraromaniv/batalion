@@ -1,7 +1,7 @@
 <div class="pre-post"></div>
-<section class="container">
+<section>
   <div style="margin-bottom: 0" class="row center tablet-fix-overflow">
-    <div class="col l8 m12 s12 border-color">
+    <div class="col l6 m12 s12 border-color">
       <div class="partners-slogan">
         Партнери
       </div>
@@ -13,7 +13,7 @@
         <a class="carousel-item" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/partners/1.png" alt="img"></a>
       </div>
     </div>
-    <div class="col l4 m12 s12">
+    <div class="offset-l1 col l4 m12 s12">
       <div class="subs-slogan">
         Стати членом
       </div>

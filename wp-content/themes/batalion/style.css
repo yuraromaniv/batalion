@@ -53,7 +53,7 @@ body {
 }
 
 .logo {
-  max-width: 150px;
+  max-width: 200px;
 }
 
 .org-name {
@@ -98,12 +98,16 @@ ul a {
 .more-icon {
   margin-left: 0 !important;
   margin-top: 7px;
-  color: indigo;
 }
 
-.dropdown-button:hover .more-icon {
-  transform: rotate(900deg);
-  transition: ease-out 1s;
+.active.dropdown-content{
+  width: 163px !important;
+  position: absolute !important;
+  top: 266px !important;
+/*   left: 297px !important; */
+}
+.dropdown-content li a{
+  color: black;
 }
 
 .jssorb051 .i {
@@ -176,8 +180,9 @@ ul a {
   position: absolute;
   width: 100%;
   height: 159px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   bottom: 0;
+  z-index: 9;
 }
 
 .ph-name-slider {
@@ -187,6 +192,7 @@ ul a {
   font-size: 35px;
   top: 38px;
   left: 7px;
+  z-index: 10;
 }
 
 .img-fix-top {
@@ -266,7 +272,7 @@ ul a {
 }
 
 .iframe-block {
-  padding-bottom: 30px;
+  padding-bottom: 30px !important;
 }
 
 .parallax-container {
@@ -308,7 +314,8 @@ ul a {
   border: 1px solid black !important;
   border-radius: 20px !important;
   color: black !important;
-  font-size: 24px !important;
+  font-size: 15px !important;
+  text-align: center;
 }
 
 ::-webkit-input-placeholder {
@@ -496,7 +503,8 @@ iframe {
 .looks-number {
   text-transform: uppercase;
   font-size: 26px;
-  font-family: "Bauhaus";
+  font-family: "MyriadProRegular";
+  text-align: center;
 }
 
 .looks-number span {
@@ -526,6 +534,10 @@ iframe {
 
 .pad-top {
   margin-top: 20px;
+}
+
+.pad-top>div{
+  margin-bottom: 20px
 }
 
 .more-btn {

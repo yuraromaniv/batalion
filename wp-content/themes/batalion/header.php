@@ -21,7 +21,7 @@
         text-transform: uppercase;
         font-size: 26px;
         text-align: center !important;
-        font-family: "Bauhaus";
+        font-family: "MyriadProRegular";
       }
       .org-name{
         margin: 0;
@@ -57,7 +57,7 @@
       .looks-number {
         text-transform: uppercase;
         font-size: 21px;
-        font-family: "Bauhaus";
+        font-family: "MyriadProRegular";
       }
       #jssor_1 {
         height: 172px !important;
@@ -76,7 +76,7 @@
       .looks-number {
         text-transform: uppercase;
         font-size: 21px;
-        font-family: "Bauhaus";
+        font-family: "MyriadProRegular";
       }
       #jssor_1 {
         height: 172px  !important;
@@ -122,7 +122,7 @@
     <div class="center">
       <ul class="hide-on-med-and-down nav-list">
         <li><a href="<?php echo get_home_url(); ?>">Головна</a></li>
-        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Про нас<i class="material-icons right more-icon">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-button" data-activates="dropdown1">Про нас<i class="material-icons right more-icon">arrow_drop_down</i></a></li>
         <li><a href="<?php echo get_post_type_archive_link('events'); ?>">Події</a></li>
         <li><a href="<?php echo get_post_type_archive_link('blogs'); ?>">Блог</a></li>
         <li><a href="<?php the_permalink(50); ?>">Членство</a></li>
@@ -133,10 +133,10 @@
     </div>
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
+      <li><a href="<?php the_permalink(40); ?>">Про нас</a></li>
       <li><a href="<?php the_permalink(58); ?>">Наші погляди</a></li>
       <li><a href="<?php the_permalink(69); ?>">Аналіз сучасого стану</a></li>
-      <li class="divider"></li>
-      <li><a href="<?php the_permalink(40); ?>">Про нас</a></li>
+      <li><a href="<?php the_permalink(40); ?>">Внески/Пожертування</a></li>
     </ul>
     <div class="pre-post">  </div>
   </header>

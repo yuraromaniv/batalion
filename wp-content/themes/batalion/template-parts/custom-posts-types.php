@@ -406,7 +406,7 @@
             'hierarchical' => true,
             'supports' => array( 'title', 'editor' ), // 'author', 'thumbnail', 'revisions', 'comments'
             //'taxonomies' => array( 'post_tag', 'category' ), 
-            'has_archive' => true,
+            'has_archive' => false,
             'rewrite' => true,
             'query_var' => true,
             'can_export' => true

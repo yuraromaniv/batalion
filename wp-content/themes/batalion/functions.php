@@ -24,6 +24,7 @@
     }
   }
 
+
   //function for display short title for posts
   function short_post_title( $charlength ) {
     global $post;
@@ -39,7 +40,7 @@
   }
 
 
-//custom login form
+  //custom login form
   function my_custom_login_logo(){
     echo '
     <style type="text/css">
@@ -52,10 +53,9 @@
     </style>';
   }
   add_action('login_head', 'my_custom_login_logo');
-//end custom login form
 
 
-//delete widgets from console
+  //delete widgets from console
   function clear_wp_dash() {
     $dash_side = &$GLOBALS['wp_meta_boxes']['dashboard']['side']['core'];
     $dash_normal = &$GLOBALS['wp_meta_boxes']['dashboard']['normal']['core'];
@@ -63,7 +63,85 @@
     unset( $dash_side['dashboard_secondary'] );      //Інші новини WordPress
   }
   add_action('wp_dashboard_setup', 'clear_wp_dash' );
-//end delete widgets from console
+
+
+  //change default posts sort in admin panel
+  function order_posts_in_admin_by_id( $query ) {
+    if ( is_admin() && $query->is_main_query() ) {
+      $query->set( 'orderby', 'date' );
+      $query->set( 'order', 'DESC');
+    }
+  }
+  add_action( 'pre_get_posts', 'order_posts_in_admin_by_id' );
+
+
+  //get posts using ajax
+  function true_load_posts() {
+    $args = unserialize( stripslashes( $_POST['query'] ) );
+    $args['paged'] = $_POST['page'] + 1; // следующая страница
+    $args['post_status'] = 'publish';
+    $q = new WP_Query( $args );
+    if ( $q->have_posts() ) {
+      while ( $q->have_posts() ) {
+        $q->the_post();
+        if ( get_post_type() == "events" ) {
+          display_event_temp();
+        }
+        else if ( get_post_type() == "blogs" ) {
+          echo '';
+        }
+        else if ( get_post_type() == "discussions" ) {
+          echo '';
+        }
+      } //end while
+    } //end if
+    wp_reset_postdata();
+    die();
+  }
+  add_action('wp_ajax_loadmore', 'true_load_posts');
+  add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
+  //end get posts using ajax
+
+  //template for display events
+  function display_event_temp() {?>
+    <div class="news-block row">
+      <div class="col l3 m6 s12">
+        <a href="<?php the_permalink(); ?>">
+          <div style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)" class="news-img"></div>
+        </a>
+      </div>
+      <div class="col l9 m6 s12">
+        <div class="news-desc">
+          <a href="<?php the_permalink(); ?>">
+            <div class="news-desc-main"><?php echo short_post_title(100); ?></div>
+          </a>
+          <div class="news-date">
+            <?php the_time( 'j F Y' ); ?>
+          </div>
+          <a href="<?php the_permalink(); ?>">
+            <div class="news-text"><?php echo short_post_desc(180); ?></div>
+          </a>
+        </div>
+      </div>
+    </div>
+<?php
+  }
+
+  //template for display blogs
+  function display_blog_temp() { ?>
+    <div class="iframe-block col m6 s12 l12">
+      <a href="<?php the_permalink(); ?>">
+        <iframe src="https://www.youtube.com/embed/8AtC4WjXBSQ" allowfullscreen></iframe>
+      </a>
+      <a href="<?php the_permalink(); ?>">
+        <div class="iframe-desc">
+          <?php echo short_post_title(100); ?>
+        </div>
+      </a>
+      <div class="iframe-date"><?php the_time( 'j F Y' ); ?></div>
+    </div>
+<?php
+  }
 
 /*
 //hide not used fields

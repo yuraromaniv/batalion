@@ -37,6 +37,10 @@
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/node_modules/materialize-css/dist/js/materialize.min.js"></script>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jssor.slider-25.0.7.min.js"></script>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/init.js"></script>
+
+  <!--Ajax підuрузка постів -->
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/loadmore.js"></script>
+
   
   <?php
     if ( is_home() ) {

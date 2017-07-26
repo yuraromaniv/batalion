@@ -100,27 +100,7 @@
       <div class="news-slogan center">Останні новини</div>';
       while ( $query->have_posts() ) {
         $query->the_post();
-        echo '
-        <div class="news-block row">
-          <div class="col l3 m6 s12">
-            <a href="' . get_the_permalink() . '">
-              <div style="background-image: url(' . get_the_post_thumbnail_url('' ,'thumbnail') . ')" class="news-img"></div>
-            </a>
-          </div>
-          <div class="col l9 m6 s12">
-            <div class="news-desc">
-              <div class="news-desc-main">
-                <a href="' . get_the_permalink() . '">' . short_post_title(100) . '</a>
-              </div>
-              <div class="news-date">
-                <a href="' . get_the_permalink() . '">' . get_the_time( 'j F Y' ) . '</a>
-              </div>
-              <div class="news-text">
-                <a href="' . get_the_permalink() . '">' . short_post_desc( 180 ) . '</a>
-              </div>
-            </div>
-          </div>
-        </div>';
+        display_event_temp();
       } //end while
       echo '
     </div>';
@@ -144,19 +124,11 @@
       </div>';
       while ( $query->have_posts() ) {
         $query->the_post();
-        echo '
-        <div class="iframe-block col m6 s12 l12">
-        <iframe  src="https://www.youtube.com/embed/8AtC4WjXBSQ" allowfullscreen></iframe>
-        <a href="' . get_the_permalink() . '">
-          <div class="iframe-desc">' . short_post_title(100) . '</div>
-        </a>
-        <div class="iframe-date">' . get_the_time( 'j F Y' ) . '</div>
-      </div>';
+        display_blog_temp();
       } //end while
       echo '
     </div>';
   } //end if
-
 ?>
 
   </div>

@@ -20,7 +20,7 @@
             while ( $query->have_posts() ) {
               $query->the_post();
               echo '
-              <a class="carousel-item" href="' . get_post_meta( $post->ID, "link_to_partner", true ) . '">
+              <a class="carousel-item" target="_blank" href="' . get_post_meta( $post->ID, "link_to_partner", true ) . '">
                 <img src="' . get_the_post_thumbnail_url('' ,'medium') . '" alt="' . get_the_title() . '">
               </a>';
             } //end while

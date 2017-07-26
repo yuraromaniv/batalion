@@ -2,7 +2,7 @@
   //НАША КОМАНДА
   $args = array(
     'post_type' => array('teams'),
-    'posts_per_page' => 4,
+    'posts_per_page' => 3,
     'publish' => true,
     'orderby' => 'date',
     'order' => 'DESC'

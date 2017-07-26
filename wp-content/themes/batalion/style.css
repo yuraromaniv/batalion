@@ -50,6 +50,11 @@ body {
 
 .border-color-contacts {
   border-left: 5px solid #CC4D56;
+  padding: 0 !important;
+}
+
+.border-color-contacts iframe{
+  height: 350px !important;
 }
 
 .logo {
@@ -597,4 +602,7 @@ a {
 
 .single-img {
   max-width: 100%;
+}
+.g-recaptcha{
+  margin-bottom: 10px;
 }

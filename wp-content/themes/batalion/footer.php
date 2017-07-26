@@ -79,6 +79,9 @@
         $(window).bind("orientationchange", ScaleSlider);
       });
     </script>
+    <script type="text/javascript">
+      $(".button-collapse").sideNav();
+    </script>
   <?php
     }
   ?>

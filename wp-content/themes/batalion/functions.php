@@ -105,24 +105,20 @@
   //template for display events
   function display_event_temp() {?>
     <div class="news-block row">
+      <a href="<?php the_permalink(); ?>">
       <div class="col l3 m6 s12">
-        <a href="<?php the_permalink(); ?>">
           <div style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)" class="news-img"></div>
-        </a>
       </div>
       <div class="col l9 m6 s12">
         <div class="news-desc">
-          <a href="<?php the_permalink(); ?>">
             <div class="news-desc-main"><?php echo short_post_title(100); ?></div>
-          </a>
           <div class="news-date">
             <?php the_time( 'j F Y' ); ?>
           </div>
-          <a href="<?php the_permalink(); ?>">
             <div class="news-text"><?php echo short_post_desc(180); ?></div>
-          </a>
         </div>
       </div>
+      </a>
     </div>
 <?php
   }

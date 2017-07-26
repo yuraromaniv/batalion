@@ -97,7 +97,7 @@
   if ( $query->have_posts() ) {
     echo '
     <div class="col l8 m12 s12 border-color">
-      <div class="news-slogan center">Останні новини</div>';
+      <div class="news-slogan center">Останні події</div>';
       while ( $query->have_posts() ) {
         $query->the_post();
         display_event_temp();

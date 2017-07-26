@@ -6,146 +6,67 @@
 <section class="news&blogs container">
   <div style="margin-bottom: 0" class="row">
     <div class="col l8 m12 s12 border-color">
-      <div class="news-slogan center">
-        обговорення
-      </div>
-      <div class="news-block row">
-        <div class="col l12 m12 s12">
-          <div  class="news-desc">
-            <div class="news-desc-main archive-news">
-              <a href="#">
-              Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-              </a>
-            </div>
-            <div class="news-text">
-              <a href="#">
-              Для потреб бійців, які супроводжують військові ешелони, переобладнали перший службово-технічний рефрижераторний вагон. Плануємо днями...</a>
-            </div>
-            <div class="news-date">
-              6 липня 2017
-            </div>
-          </div>
+      <div class="news-slogan center">обговорення</div>
+      <?php
+      //Обговорення
+      $args = array(
+        'post_type' => 'discussions',
+        'posts_per_page' => 7,
+        'publish' => true,
+        'orderby' => 'date',
+        'order' => 'DESC'
+      );
+      $query = new WP_Query( $args );
+      if ( $query->have_posts() ) { ?>
+        <div class="news-block row">
+        <?php
+          while ( $query->have_posts() ) {
+            $query->the_post();
+            display_discussions_temp();
+          } //end while 
+          if ( $query->max_num_pages > 1 ) { ?>
+            <script>
+              var discussions_ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
+              var discussions_true_posts = '<?php echo serialize( $query->query_vars ); ?>';
+              var discussions_current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
+              var discussions_max_pages = '<?php echo $query->max_num_pages; ?>';
+            </script>
+            <div id="discussions_loadmore" class="col l12 m12 s12 center btn more-btn red">Більше тем</div>
+            <!--<a class="waves-effect waves-light btn more-btn red">Більше тем</a>-->
+          <?php } //end if ?>
         </div>
-        <div class="col l12 m12 s12">
-          <div  class="news-desc">
-            <div class="news-desc-main archive-news">
-              <a href="#">
-              Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-              </a>
-            </div>
-            <div class="news-text">
-              <a href="#">
-              Для потреб бійців, які супроводжують військові ешелони, переобладнали перший службово-технічний рефрижераторний вагон. Плануємо днями...</a>
-            </div>
-            <div class="news-date">
-              6 липня 2017
-            </div>
-          </div>
-        </div>
-        <div class="col l12 m12 s12">
-          <div  class="news-desc">
-            <div class="news-desc-main archive-news">
-              <a href="#">
-              Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-              </a>
-            </div>
-            <div class="news-text">
-              <a href="#">
-              Для потреб бійців, які супроводжують військові ешелони, переобладнали перший службово-технічний рефрижераторний вагон. Плануємо днями...</a>
-            </div>
-            <div class="news-date">
-              6 липня 2017
-            </div>
-          </div>
-        </div>
-        <div class="col l12 m12 s12">
-          <div  class="news-desc">
-            <div class="news-desc-main archive-news">
-              <a href="#">
-              Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-              </a>
-            </div>
-            <div class="news-text">
-              <a href="#">
-              Для потреб бійців, які супроводжують військові ешелони, переобладнали перший службово-технічний рефрижераторний вагон. Плануємо днями...</a>
-            </div>
-            <div class="news-date">
-              6 липня 2017
-            </div>
-          </div>
-        </div>
-        <div class="col l12 m12 s12">
-          <div  class="news-desc">
-            <div class="news-desc-main archive-news">
-              <a href="#">
-              Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-              </a>
-            </div>
-            <div class="news-text">
-              <a href="#">
-              Для потреб бійців, які супроводжують військові ешелони, переобладнали перший службово-технічний рефрижераторний вагон. Плануємо днями...</a>
-            </div>
-            <div class="news-date">
-              6 липня 2017
-            </div>
-          </div>
-        </div>
-        <div class="col l12 m12 s12">
-          <div  class="news-desc">
-            <div class="news-desc-main archive-news">
-              <a href="#">
-              Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-              </a>
-            </div>
-            <div class="news-text">
-              <a href="#">
-              Для потреб бійців, які супроводжують військові ешелони, переобладнали перший службово-технічний рефрижераторний вагон. Плануємо днями...</a>
-            </div>
-            <div class="news-date">
-              6 липня 2017
-            </div>
-          </div>
-        </div>
-        <div class="col l12 m12 s12">
-          <div  class="news-desc">
-            <div class="news-desc-main archive-news">
-              <a href="#">
-              Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-              </a>
-            </div>
-            <div class="news-text">
-              <a href="#">
-              Для потреб бійців, які супроводжують військові ешелони, переобладнали перший службово-технічний рефрижераторний вагон. Плануємо днями...</a>
-            </div>
-            <div class="news-date">
-              6 липня 2017
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col l12 m12 s12 center">
-        <a class="waves-effect waves-light btn more-btn red">Більше тем</a>
-      </div>
+      <?php
+      } //end if
+      wp_reset_postdata();
+      ?>
     </div>
-    <div class="col l4 m12 s12 ">
-      <div class="blog-slogan center ">
-        Останні блоги
-      </div>
-      <div class="iframe-block col m6 s12 l12">
-        <iframe src="https://www.youtube.com/embed/k27PXDZZgs4" allowfullscreen></iframe>
-        <div class="iframe-desc">
-          Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
+
+    <?php
+      //ОСТАННІ БЛОГИ
+      $args = array(
+        'post_type' => array('blogs'),
+        'posts_per_page' => 2,
+        'publish' => true,
+        'orderby' => 'date',
+        'order' => 'DESC'
+      );
+      $query = new WP_Query( $args );
+      if ( $query->have_posts() ) { ?>
+        <div class="col l4 m12 s12 ">
+          <div class="blog-slogan center ">
+            Останні блоги
+          </div>
+          <?php
+            while ( $query->have_posts() ) {
+              $query->the_post();
+              display_blog_temp();
+            } //end while
+          ?>
         </div>
-        <div class="iframe-date">29 липня 2017</div>
-      </div>
-      <div class="iframe-block col m6 s12 l12">
-        <iframe src="https://www.youtube.com/embed/k27PXDZZgs4" allowfullscreen></iframe>
-        <div class="iframe-desc">
-          Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-        </div>
-        <div class="iframe-date">29 липня 2017</div>
-      </div>
-    </div>
+      <?php
+      } //end if
+      wp_reset_postdata();
+    ?>
   </div>
   <br>
 </section>

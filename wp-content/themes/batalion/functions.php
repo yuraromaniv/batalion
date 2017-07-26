@@ -87,11 +87,14 @@
         if ( get_post_type() == "events" ) {
           display_event_temp();
         }
-        else if ( get_post_type() == "blogs" ) {
-          echo '';
+        else if ( get_post_type() == "blogs" ) { ?>
+          <div class="col l4 m6 s12">
+            <?php display_blog_temp(); ?>
+          </div>
+        <?php
         }
         else if ( get_post_type() == "discussions" ) {
-          echo '';
+          display_discussions_temp();
         }
       } //end while
     } //end if
@@ -115,12 +118,12 @@
           <div class="news-date">
             <?php the_time( 'j F Y' ); ?>
           </div>
-            <div class="news-text"><?php echo short_post_desc(180); ?></div>
+          <div class="news-text"><?php echo short_post_desc(180); ?></div>
         </div>
       </div>
       </a>
     </div>
-<?php
+  <?php
   }
 
   //template for display blogs
@@ -136,8 +139,31 @@
       </a>
       <div class="iframe-date"><?php the_time( 'j F Y' ); ?></div>
     </div>
-<?php
+  <?php
   }
+
+  //template for display discussions
+  function display_discussions_temp() { ?>
+    <div class="col l12 m12 s12">
+      <div class="news-desc">
+        <div class="news-desc-main archive-news">
+          <a href="<?php the_permalink(); ?>">
+            <?php echo short_post_title(100); ?>
+          </a>
+        </div>
+        <div class="news-text">
+          <a href="<?php the_permalink(); ?>">
+            <?php echo short_post_desc(180); ?>
+          </a>
+        </div>
+        <div class="news-date">
+          <?php the_time( 'j F Y' ); ?>
+        </div>
+      </div>
+    </div>
+  <?php
+  }
+
 
 /*
 //hide not used fields
@@ -157,3 +183,5 @@
   add_action( 'admin_menu', 'remove_menus' );
 //end hide not used fields
 */
+
+?>

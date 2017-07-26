@@ -104,17 +104,17 @@
     echo '<header>';
   }
   ?>
-  <div class="pre-post">  </div>
+  <div class="pre-post"></div>
   <div class="hide-on-large-only">
     <ul id="slide-out" class="side-nav">
-      <li><a href="#">Головна</a></li>
-      <li><a href="#">Про нас</a></li>
-      <li><a href="#">Події</a></li>
-      <li><a href="#">Блог</a></li>
-      <li><a href="#">Членство</a></li>
-      <li><a href="#">Бібліотека</a></li>
-      <li><a href="#">Обговорення</a></li>
-      <li><a href="#">Контакти</a></li>
+      <li><a href="<?php echo home_url(); ?>">Головна</a></li>
+      <li><a href="<?php the_permalink(40); ?>">Про нас</a></li>
+      <li><a href="<?php echo get_post_type_archive_link('events'); ?>">Події</a></li>
+      <li><a href="<?php echo get_post_type_archive_link('blogs'); ?>">Блог</a></li>
+      <li><a href="<?php the_permalink(50); ?>">Членство</a></li>
+      <li><a href="<?php the_permalink(45); ?>">Бібліотека</a></li>
+      <li><a href="<?php echo get_post_type_archive_link('discussions'); ?>">Обговорення</a></li>
+      <li><a href="<?php the_permalink(37); ?>">Контакти</a></li>
     </ul>
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
   </div>
@@ -123,7 +123,7 @@
       <div class="org-name ">Громадська огранізація<br> "Корпус Доброї Волі"</div>
     </div>
     <div class="col l4 m6 s12">
-      <a href="#"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/logo/logo.svg" alt="logo"></a>
+      <a href="<?php echo home_url(); ?>"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/logo/logo.svg" alt="logo"></a>
     </div>
     <div class="col l4 hide-on-med-and-down">
       <div class="slogan">
@@ -134,7 +134,7 @@
   <hr style="padding:0;margin: 0; height: 2px; background-color: lightgrey;border: none; color: lightgrey;">
   <div class="center">
     <ul class="hide-on-med-and-down nav-list">
-      <li><a href="<?php echo get_home_url(); ?>">Головна</a></li>
+      <li><a href="<?php echo home_url(); ?>">Головна</a></li>
       <li><a class="dropdown-button" data-activates="dropdown1">Про нас<i class="material-icons right more-icon">arrow_drop_down</i></a></li>
       <li><a href="<?php echo get_post_type_archive_link('events'); ?>">Події</a></li>
       <li><a href="<?php echo get_post_type_archive_link('blogs'); ?>">Блог</a></li>
@@ -149,7 +149,7 @@
     <li><a href="<?php the_permalink(40); ?>">Про нас</a></li>
     <li><a href="<?php the_permalink(58); ?>">Наші погляди</a></li>
     <li><a href="<?php the_permalink(69); ?>">Аналіз сучасого стану</a></li>
-    <li><a href="<?php the_permalink(40); ?>">Внески/Пожертування</a></li>
+    <li><a href="#">Внески/Пожертування</a></li>
   </ul>
-  <div class="pre-post">  </div>
+  <div class="pre-post"></div>
 </header>

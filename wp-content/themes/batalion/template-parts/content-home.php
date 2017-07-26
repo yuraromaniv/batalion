@@ -8,23 +8,23 @@
 		'order' => 'DESC'
 	);
 	$query = new WP_Query( $args );
-	if ( $query->have_posts() ) {
-		echo '
+	if ( $query->have_posts() ) { ?>
 		<div id="jssor_1" style="position:relative;margin:0 auto;width:1300px;height:381px;overflow:hidden;visibility:hidden">
-      <div data-u="slides" style="cursor:default;position:relative;width:1300px;height:290px;overflow:hidden;">';
+      <div data-u="slides" style="cursor:default;position:relative;width:1300px;height:290px;overflow:hidden;">
+      <?php
         while ( $query->have_posts() ) {
-          $query->the_post();
-          echo '
+          $query->the_post(); ?>
           <div>
-            <a href="' . get_the_permalink() . '">
-              <img style="height: 290px !important;" class="img-fix-top" data-u="image" alt="' . get_the_title() . '" src="' . get_the_post_thumbnail_url('' ,'full') . '" />
+            <a href="<?php the_permalink(); ?>">
+              <img style="height: 290px !important;" class="img-fix-top" data-u="image" alt="<?php the_title(); ?>" src="<?php the_post_thumbnail_url('' ,'full'); ?>" />
               <div class="mask center">
-                <div class="ph-name-slider">' . short_post_title(40) . '</div>
+                <div class="ph-name-slider"><?php echo short_post_title(40); ?></div>
               </div>
             </a>
-          </div>';
+          </div>
+        <?php
         } //end while
-        echo '
+        ?>
 			</div>
       <!-- Bullet Navigator -->
       <div data-u="navigator" class="jssorb051 hide-on-large-only" style="position:absolute;bottom:0px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
@@ -36,13 +36,15 @@
       </div>
       <!-- Arrow Navigator -->
       <div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:45px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
-        <img class="slider-arrow-left" src="' . get_template_directory_uri() . '/img/arr/left.svg" alt="arrow">
+        <img class="slider-arrow-left" src="<?php echo get_template_directory_uri(); ?>/img/arr/left.svg" alt="arrow">
       </div>
       <div data-u="arrowright" class="jssora051" style="width:65px;height:65px;top:0px;right:45px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
-        <img class="slider-arrow-right" src="' . get_template_directory_uri() . '/img/arr/right.svg" alt="arrow">
+        <img class="slider-arrow-right" src="<?php echo get_template_directory_uri(); ?>/img/arr/right.svg" alt="arrow">
       </div>
-    </div>';
+    </div>
+  <?php
 	} //end if
+  wp_reset_postdata();
 
 
   //Цілі та завдання
@@ -54,30 +56,31 @@
     'order' => 'DESC'
   );
   $query = new WP_Query( $args );
-  if ( $query->have_posts() ) {
-    echo '
+  if ( $query->have_posts() ) { ?>
     <section class="tasks ">
       <div class="task-slogan center">Цілі та завдання</div>
       <hr style="padding:0;margin: 0; height: 2px; background-color: lightgrey;border: none; color: lightgrey;">
       <div class="container">
-        <div class="flex-container">';
+        <div class="flex-container">
+        <?php
         while ( $query->have_posts() ) {
-          $query->the_post();
-          echo '
+          $query->the_post(); ?>
           <div class="task-block">
             <div class="task-img">
-              <img class="task-img-max-width" src="' . get_the_post_thumbnail_url('' ,'thumbnail') . '" alt="' . get_the_title() . '">
+              <img class="task-img-max-width" src="<?php the_post_thumbnail_url('' ,'thumbnail'); ?>" alt="<?php the_title(); ?>">
             </div>
-            <div class="task-desc center">' . short_post_title(140) . '</div>
-          </div>';
+            <div class="task-desc center"><?php echo short_post_title(140); ?></div>
+          </div>
+        <?php
         } //end while
-        echo '
+        ?>
         </div>
       </div>
       <br>
-    </section>';
+    </section>
+  <?php
   } //end if
-
+  wp_reset_postdata();
 ?>
 
 <div class="pre-post"></div>
@@ -94,17 +97,19 @@
     'order' => 'DESC'
   );
   $query = new WP_Query( $args );
-  if ( $query->have_posts() ) {
-    echo '
+  if ( $query->have_posts() ) { ?>
     <div class="col l8 m12 s12 border-color">
-      <div class="news-slogan center">Останні події</div>';
+      <div class="news-slogan center">Останні події</div>
+      <?php
       while ( $query->have_posts() ) {
         $query->the_post();
         display_event_temp();
       } //end while
-      echo '
-    </div>';
+      ?>
+    </div>
+  <?php
   } //end if
+  wp_reset_postdata();
 
 
   //ОСТАННІ БЛОГИ
@@ -116,19 +121,21 @@
     'order' => 'DESC'
   );
   $query = new WP_Query( $args );
-  if ( $query->have_posts() ) {
-    echo '
+  if ( $query->have_posts() ) { ?>
     <div class="col l4 m12 s12 center">
       <div class="blog-slogan ">
         Останні блоги
-      </div>';
+      </div>
+      <?php
       while ( $query->have_posts() ) {
         $query->the_post();
         display_blog_temp();
       } //end while
-      echo '
-    </div>';
+      ?>
+    </div>
+  <?php
   } //end if
+  wp_reset_postdata();
 ?>
 
   </div>

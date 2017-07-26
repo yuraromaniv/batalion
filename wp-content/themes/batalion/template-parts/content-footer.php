@@ -10,24 +10,24 @@
         'order' => 'DESC'
       );
       $query = new WP_Query( $args );
-      if ( $query->have_posts() ) {
-        echo '
-          <div class="col l6 m12 s12 border-color">
-            <div class="partners-slogan">
-              Партнери
-            </div>
-            <div class="carousel">';
-            while ( $query->have_posts() ) {
-              $query->the_post();
-              echo '
-              <a class="carousel-item" target="_blank" href="' . get_post_meta( $post->ID, "link_to_partner", true ) . '">
-                <img src="' . get_the_post_thumbnail_url('' ,'medium') . '" alt="' . get_the_title() . '">
-              </a>';
-            } //end while
-            echo '
-            </div>
-          </div>';
+      if ( $query->have_posts() ) { ?>
+        <div class="col l6 m12 s12 border-color">
+          <div class="partners-slogan">Партнери</div>
+          <div class="carousel">
+          <?php
+          while ( $query->have_posts() ) {
+            $query->the_post(); ?>
+            <a class="carousel-item" target="_blank" href="<?php echo get_post_meta( $post->ID, "link_to_partner", true ); ?>">
+              <img src="<?php the_post_thumbnail_url('' ,'medium'); ?>" alt="<?php the_title(); ?>">
+            </a>
+          <?php
+          } //end while
+          ?>
+          </div>
+        </div>
+      <?php
       } //end if
+      wp_reset_postdata();
     ?>
     
     <div class="offset-l1 col l4 m12 s12">

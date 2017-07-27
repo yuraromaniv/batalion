@@ -283,7 +283,8 @@ ul a {
 
 .parallax-container {
   background-color: rgba(252, 255, 255, 0.4);
-  height: 400px;
+  height: auto;
+  padding-bottom: 20px;
 }
 
 .parallax-slogan {
@@ -293,7 +294,7 @@ ul a {
 }
 
 .member-img {
-  max-width: 50%;
+  max-width: 200px;
 }
 
 .member-name {
@@ -606,11 +607,12 @@ a {
 }
 .g-recaptcha{
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .modal-trigger{
   position: fixed;
-  top: 550px;
+  top: 500px;
   right: 30px;
 }
 
@@ -623,4 +625,8 @@ a {
 
 .modal{
   max-height: 100% !important;
+}
+
+.modal-content h4{
+  font-family: "Gabriola";
 }

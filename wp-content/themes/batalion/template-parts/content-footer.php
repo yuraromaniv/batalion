@@ -37,6 +37,7 @@
         <input class="application-field" type="text" name="user_surname" placeholder="Прізвище" required /><br />
         <input class="application-field" type="tel" name="user_phone" placeholder="Номер телефону" required /><br />
         <input class="application-field" type="email" name="user_email" placeholder="E-mail" required /><br />
+        <input class="application-field" type="number" name="user_age" min="15" placeholder="Ваш вік" required /><br />
         <div class="g-recaptcha" data-sitekey="6LdpQygUAAAAAFEPYYDzWZKsS5q7hdpxFQNmjwsA"></div>
         <button id="callback-button1" class="applicationButton">НАДІСЛАТИ ЗАЯВКУ</button>
       </form>

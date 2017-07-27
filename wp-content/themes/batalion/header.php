@@ -41,7 +41,7 @@
         border-right: none;
       }
       .parallax-container{
-        height: 800px
+        height: auto;
       }
       .member-desc{
         margin-bottom: 20px;
@@ -54,7 +54,8 @@
     }
     @media screen and (min-width: 1024px) and (max-width: 1240px)  {
       .parallax-container{
-        height: 300px
+        height: auto;
+        padding-bottom: 20px;
       }
       .looks-number {
         text-transform: uppercase;
@@ -69,13 +70,14 @@
       }
       .modal-trigger{
         position: fixed;
-        top: 450px !important;
+        top: 400px;
         right: 30px;
       }
     }
     @media screen and (min-width: 768px) and (max-width: 1024px) {
       .parallax-container{
-        height: 300px
+        height: auto;
+        padding-bottom: 20px;
       }
       .looks-number {
         text-transform: uppercase;
@@ -90,26 +92,21 @@
       }
       .modal-trigger{
         position: fixed;
-        top: 400px !important;
+        top: 300px;
         right: 30px;
       }
     }
     @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
       .parallax-container{
-        height: 1100px
+        height: auto;
       }
       .modal-trigger{
         position: fixed;
         top: 250px;
-        right: 30px !important;
+        right: 30px;
       }
     }
     @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
-      .modal-trigger{
-        position: fixed;
-        top: 500px;
-        right: 10px;
-      }
     }
   </style>
 </head>
@@ -148,6 +145,18 @@
         Україна понад усе!
       </div>
     </div>
+      <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Залиште ваше запитання!</h4>
+      <form class="question-form center">
+        <textarea placeholder="Введіть текст ..."></textarea>
+          <button class="btn waves-effect waves-light" type="submit" name="action">НАДІСЛАТИ</button>
+      </form>
+    </div>
+  </div>
+      <!-- Modal Trigger -->
+  <a class="btn btn-floating btn-large cyan pulse modal-trigger" href="#modal1"><i class="material-icons">edit</i></a>
   </div>
   <hr style="padding:0;margin: 0; height: 2px; background-color: lightgrey;border: none; color: lightgrey;">
   <div class="center">
@@ -169,17 +178,5 @@
     <li><a href="<?php the_permalink(69); ?>">Аналіз сучасого стану</a></li>
     <li><a href="#">Внески/Пожертування</a></li>
   </ul>
-    <!-- Modal Trigger -->
-  <a class="btn btn-floating btn-large cyan pulse modal-trigger" href="#modal1"><i class="material-icons">edit</i></a>
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Залиште ваше запитання!</h4>
-      <form class="question-form center">
-        <textarea placeholder="Введіть текст ..."></textarea>
-          <button class="btn waves-effect waves-light" type="submit" name="action">НАДІСЛАТИ</button>
-      </form>
-    </div>
-  </div>
   <div class="pre-post"></div>
 </header>

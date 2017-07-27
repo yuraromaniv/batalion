@@ -5,7 +5,7 @@
 
 <section class="news&blogs container">
   <div style="margin-bottom: 0" class="row">
-    <div class="col l7 m8 s12 border-color">
+    <div class="col l8 m7 s12 border-color">
       <div class="news-block row single-talk">
         <div class="col l12 m12 s12">
           <div  class="news-desc">
@@ -27,23 +27,27 @@
         </div>
       </div>
     </div>
-    <div class="col l5 m4 s12 ">
+    <div class="col l4 m5 s12 ">
       <div class="blog-slogan center ">
         Останні блоги
       </div>
       <div class="iframe-block col m12 s12 l12">
-        <iframe src="https://www.youtube.com/embed/k27PXDZZgs4" allowfullscreen></iframe>
-        <a href="#"><div class="iframe-desc">
+        <a href="#">
+        <div style="width: 100%; height: 200px; background-image: url(<?php echo get_template_directory_uri(); ?>/img/news/1.jpg);background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+        <div class="iframe-desc">
           Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-        </div></a>
+        </div>
         <div class="iframe-date">29 липня 2017</div>
+        </a>
       </div>
       <div class="iframe-block col m12 s12 l12">
-        <iframe src="https://www.youtube.com/embed/k27PXDZZgs4" allowfullscreen></iframe>
-        <a href="#"><div class="iframe-desc">
+        <a href="#">
+        <div style="width: 100%; height: 200px; background-image: url(<?php echo get_template_directory_uri(); ?>/img/news/2.jpg);background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+        <div class="iframe-desc">
           Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-        </div></a>
+        </div>
         <div class="iframe-date">29 липня 2017</div>
+        </a>
       </div>
     </div>
   </div>

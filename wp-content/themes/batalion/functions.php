@@ -130,14 +130,12 @@
   function display_blog_temp() { ?>
     <div class="iframe-block col m6 s12 l12">
       <a href="<?php the_permalink(); ?>">
-        <iframe src="https://www.youtube.com/embed/8AtC4WjXBSQ" allowfullscreen></iframe>
-      </a>
-      <a href="<?php the_permalink(); ?>">
+        <div style="width: 100%; height: 200px; background-image: url(<?php echo get_template_directory_uri(); ?>/img/news/1.jpg);background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
         <div class="iframe-desc">
           <?php echo short_post_title(100); ?>
         </div>
-      </a>
       <div class="iframe-date"><?php the_time( 'j F Y' ); ?></div>
+      </a>
     </div>
   <?php
   }

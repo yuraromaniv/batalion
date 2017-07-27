@@ -14,9 +14,6 @@
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <style>
     @media screen and (max-width: 768px) {
-      #jssor_1 {
-        height: 80px !important;
-      }
       .looks-number {
         text-transform: uppercase;
         font-size: 26px;
@@ -59,9 +56,6 @@
         font-size: 21px;
         font-family: "MyriadProRegular";
       }
-      #jssor_1 {
-        height: 172px !important;
-      }
       .tablet-fix-overflow{
         overflow: hidden;
       }
@@ -77,9 +71,6 @@
         text-transform: uppercase;
         font-size: 21px;
         font-family: "MyriadProRegular";
-      }
-      #jssor_1 {
-        height: 172px  !important;
       }
       .tablet-fix-overflow{
         overflow: hidden;

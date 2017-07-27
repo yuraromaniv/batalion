@@ -82,6 +82,11 @@
     <script type="text/javascript">
       $(".button-collapse").sideNav();
     </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.modal').modal();
+      });
+    </script>
   <?php
     }
   ?>

@@ -46,6 +46,11 @@
       .member-desc{
         margin-bottom: 20px;
       }
+      .modal-trigger{
+        position: fixed;
+        top: 500px;
+        right: 30px;
+      }
     }
     @media screen and (min-width: 1024px) and (max-width: 1240px)  {
       .parallax-container{
@@ -61,6 +66,11 @@
       }
       .border-color{
         border-right: none;
+      }
+      .modal-trigger{
+        position: fixed;
+        top: 450px !important;
+        right: 30px;
       }
     }
     @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -78,10 +88,27 @@
       .border-color{
         border-right: none;
       }
+      .modal-trigger{
+        position: fixed;
+        top: 400px !important;
+        right: 30px;
+      }
     }
     @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
       .parallax-container{
         height: 1100px
+      }
+      .modal-trigger{
+        position: fixed;
+        top: 250px;
+        right: 30px !important;
+      }
+    }
+    @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+      .modal-trigger{
+        position: fixed;
+        top: 500px;
+        right: 10px;
       }
     }
   </style>
@@ -142,5 +169,17 @@
     <li><a href="<?php the_permalink(69); ?>">Аналіз сучасого стану</a></li>
     <li><a href="#">Внески/Пожертування</a></li>
   </ul>
+    <!-- Modal Trigger -->
+  <a class="btn btn-floating btn-large cyan pulse modal-trigger" href="#modal1"><i class="material-icons">edit</i></a>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Залиште ваше запитання!</h4>
+      <form class="question-form center">
+        <textarea placeholder="Введіть текст ..."></textarea>
+          <button class="btn waves-effect waves-light" type="submit" name="action">НАДІСЛАТИ</button>
+      </form>
+    </div>
+  </div>
   <div class="pre-post"></div>
 </header>

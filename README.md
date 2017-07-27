@@ -1,4 +1,11 @@
 # batalion
+
+ver. 0.7.1
+  - встановив коментарі від dusqus
+  - функціонал для сторінок:
+    - single-blogs.php
+    - single-discussions.php
+
 ver. 0.7
   - добавив фото команди
   - пофіксив слайдер

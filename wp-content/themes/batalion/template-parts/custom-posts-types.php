@@ -144,7 +144,7 @@
             ),
             'map_meta_cap' => true,
             'hierarchical' => true,
-            'supports' => array( 'title', 'editor', 'revisions', 'comments' ), // 'author', 'thumbnail', 
+            'supports' => array( 'title', 'revisions', 'comments' ), // 'author', 'thumbnail', 'editor', 
             //'taxonomies' => array( 'post_tag', 'category' ), 
             'has_archive' => true,
             'rewrite' => true,

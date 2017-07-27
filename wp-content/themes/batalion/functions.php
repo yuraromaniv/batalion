@@ -130,7 +130,7 @@
   function display_blog_temp() { ?>
     <div class="iframe-block col m6 s12 l12">
       <a href="<?php the_permalink(); ?>">
-        <div style="width: 100%; height: 200px; background-image: url(<?php echo get_template_directory_uri(); ?>/img/news/1.jpg);background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+        <div style="width: 100%; height: 200px; background-image: url(<?php the_post_thumbnail_url('medium'); ?>);background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
         <div class="iframe-desc">
           <?php echo short_post_title(100); ?>
         </div>
@@ -147,11 +147,6 @@
         <div class="news-desc-main archive-news">
           <a href="<?php the_permalink(); ?>">
             <?php echo short_post_title(100); ?>
-          </a>
-        </div>
-        <div class="news-text">
-          <a href="<?php the_permalink(); ?>">
-            <?php echo short_post_desc(180); ?>
           </a>
         </div>
         <div class="news-date">

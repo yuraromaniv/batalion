@@ -10,25 +10,22 @@
         <div class="col l12 m12 s12">
         <?php 
           if ( have_posts() ) {
-            global $displayed_posts;		//variable to prevent duplicate video
-              while ( have_posts() ) {
-                the_post();
-        ?>
-                <div  class="news-desc">
-                  <div class="news-desc-main archive-news">
-                    <?php the_title(); ?>
-                  </div>
-                  <div class="news-text">
-                    <?php the_time( 'j F Y' ); ?>
-                  </div>
-                  <img class="single-img" src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>">
-                  <p class="single-text"><?php the_content(); ?></p>
+            while ( have_posts() ) { the_post(); ?>
+              <div  class="news-desc">
+                <div class="news-desc-main archive-news">
+                  <?php the_title(); ?>
                 </div>
-              <?php
-              } //end while
-              if ( comments_open() || get_comments_number() ) { 
-                comments_template();
-              }
+                <div class="news-text">
+                  <?php the_time( 'j F Y' ); ?>
+                </div>
+                <img class="single-img" src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>">
+                <p class="single-text"><?php the_content(); ?></p>
+              </div>
+            <?php
+            } //end while
+            if ( comments_open() || get_comments_number() ) { 
+              comments_template();
+            }
           } //end if
           ?>
         </div>
@@ -57,7 +54,7 @@
             } //end while
           ?>
         </div>
-      <?php
+    <?php
       } //end if
       wp_reset_postdata();
     ?>

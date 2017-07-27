@@ -8,48 +8,59 @@
     <div class="col l8 m7 s12 border-color">
       <div class="news-block row single-talk">
         <div class="col l12 m12 s12">
-          <div  class="news-desc">
-            <div class="news-desc-main archive-news">
-              <a href="#">
-              Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-              </a>
-            </div>
-            <div class="news-text">
-              <a href="#">
-              6 липня 2017</a>
-            </div>
-            <iframe class="single-blog-frame" src="https://www.youtube.com/embed/k27PXDZZgs4" allowfullscreen></iframe>
-            <p class="single-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dignissimos quidem repudiandae laboriosam, accusantium totam doloremque sint ratione qui quae optio, fugit ex, nesciunt molestias. Vel dolor expedita soluta autem.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere sed nostrum ut blanditiis molestias ex nemo, fuga quae tenetur! Assumenda eius voluptates necessitatibus, ipsa corrupti molestiae! Doloremque accusamus placeat officia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt asperiores, repellat impedit aliquam obcaecati unde doloribus maxime laborum, autem assumenda quas voluptates, id iusto aperiam iste vel ut. Suscipit, ad!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sint, doloribus harum, facilis adipisci doloremque explicabo magni, est tempora nihil maxime mollitia asperiores labore animi error? Debitis ex, vero dolor.</p>
+        <?php 
+          if ( have_posts() ) {
+            while ( have_posts() ) { the_post(); ?>
+              <div class="news-desc">
+                <div class="news-desc-main archive-news">
+                  <?php the_title(); ?>
+                </div>
+                <div class="news-text">
+                  <?php the_time( 'j F Y' ); ?>
+                </div>
+                <!--
+                <iframe class="single-blog-frame" src="https://www.youtube.com/embed/k27PXDZZgs4" allowfullscreen></iframe>
+                <img class="single-img" src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>">
+                -->
+                <p class="single-text"><?php the_content(); ?></p>
+              </div>
+          <?php
+            } //end while
+            if ( comments_open() || get_comments_number() ) { 
+              comments_template();
+            }
+          } //end if
+          ?>
+        </div>
+      </div>
+    </div>
+
+    <?php
+      //ОСТАННІ БЛОГИ
+      $args = array(
+        'post_type' => array('blogs'),
+        'posts_per_page' => 2,
+        'publish' => true,
+        'orderby' => 'date',
+        'order' => 'DESC'
+      );
+      $query = new WP_Query( $args );
+      if ( $query->have_posts() ) { ?>
+        <div class="col l4 m12 s12 ">
+          <div class="blog-slogan center ">
+            Останні блоги
           </div>
-          <div>Залишити коментар:</div>
-          <textarea name="talks" cols="130" rows="10"></textarea>
-          <a class="waves-effect waves-light btn  red ">надіслати</a>
+          <?php
+            while ( $query->have_posts() ) {
+              $query->the_post();
+              display_blog_temp();
+            } //end while
+          ?>
         </div>
-      </div>
-    </div>
-    <div class="col l4 m5 s12 ">
-      <div class="blog-slogan center ">
-        Останні блоги
-      </div>
-      <div class="iframe-block col m12 s12 l12">
-        <a href="#">
-        <div style="width: 100%; height: 200px; background-image: url(<?php echo get_template_directory_uri(); ?>/img/news/1.jpg);background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
-        <div class="iframe-desc">
-          Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-        </div>
-        <div class="iframe-date">29 липня 2017</div>
-        </a>
-      </div>
-      <div class="iframe-block col m12 s12 l12">
-        <a href="#">
-        <div style="width: 100%; height: 200px; background-image: url(<?php echo get_template_directory_uri(); ?>/img/news/2.jpg);background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
-        <div class="iframe-desc">
-          Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-        </div>
-        <div class="iframe-date">29 липня 2017</div>
-        </a>
-      </div>
-    </div>
+      <?php
+      } //end if
+      wp_reset_postdata();
+    ?>
   </div>
   <br>
 </section>

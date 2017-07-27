@@ -5,44 +5,57 @@
 
 <section class="news&blogs container">
   <div style="margin-bottom: 0" class="row">
-    <div class="col l7 m12 s12 border-color">
+    <div class="col l8 m12 s12 border-color">
       <div class="news-block row single-talk">
         <div class="col l12 m12 s12">
-          <div  class="news-desc">
-            <div class="news-desc-main archive-news">
-              <a href="#">
-              Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-              </a>
-            </div>
-            <div class="news-text">
-              <a href="#">
-              6 липня 2017</a>
-            </div>
+        <?php 
+          if ( have_posts() ) {
+            while ( have_posts() ) { the_post(); ?>
+              <div  class="news-desc">
+                <div class="news-desc-main archive-news">
+                  <?php the_title(); ?>
+                </div>
+                <div class="news-text">
+                  <?php the_time( 'j F Y' ); ?>
+                </div>
+              </div>
+          <?php
+            } //end while
+            if ( comments_open() || get_comments_number() ) { 
+              comments_template();
+            }
+          } //end if
+          ?>
+        </div>
+      </div>
+    </div>
+
+    <?php
+      //ОСТАННІ БЛОГИ
+      $args = array(
+        'post_type' => array('blogs'),
+        'posts_per_page' => 2,
+        'publish' => true,
+        'orderby' => 'date',
+        'order' => 'DESC'
+      );
+      $query = new WP_Query( $args );
+      if ( $query->have_posts() ) { ?>
+        <div class="col l4 m12 s12 ">
+          <div class="blog-slogan center ">
+            Останні блоги
           </div>
-          <textarea name="talks" cols="130" rows="10"></textarea>
-          <a class="waves-effect waves-light btn  red ">надіслати</a>
+          <?php
+            while ( $query->have_posts() ) {
+              $query->the_post();
+              display_blog_temp();
+            } //end while
+          ?>
         </div>
-      </div>
-    </div>
-    <div class="col l5 m12 s12 ">
-      <div class="blog-slogan center ">
-        Останні блоги
-      </div>
-      <div class="iframe-block col m6 s12 l12">
-        <iframe src="https://www.youtube.com/embed/k27PXDZZgs4" allowfullscreen></iframe>
-        <div class="iframe-desc">
-          Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-        </div>
-        <div class="iframe-date">29 липня 2017</div>
-      </div>
-      <div class="iframe-block col m6 s12 l12">
-        <iframe src="https://www.youtube.com/embed/k27PXDZZgs4" allowfullscreen></iframe>
-        <div class="iframe-desc">
-          Укрзалізниця" планує відмовитися від вагонів-"теплушок" для бійців
-        </div>
-        <div class="iframe-date">29 липня 2017</div>
-      </div>
-    </div>
+      <?php
+      } //end if
+      wp_reset_postdata();
+    ?>
   </div>
   <br>
 </section>

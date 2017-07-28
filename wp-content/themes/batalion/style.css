@@ -236,7 +236,7 @@ ul a {
   text-transform: uppercase;
 }
 
-.news-slogan, .blog-slogan {
+.news-slogan, .blog-slogan, .donats-slogan {
   text-transform: uppercase;
   font-family: "Gabriola";
   font-size: 40px;
@@ -629,4 +629,51 @@ a {
 
 .modal-content h4{
   font-family: "Gabriola";
+}
+
+.tabs{
+  background-color: transparent !important;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    color: #000000;
+    font-size: 15px
+}
+
+.tabs .tab a{
+    color: #000000;   
+}
+
+table.striped>tbody>tr:nth-child(odd) {
+    background-color: rgb(255, 255, 255);
+}
+
+.tabs .indicator {
+    background-color: #cc4d56;
+}
+
+.datepicker--nav {
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-justify-content: space-between !important;
+    -ms-flex-pack: justify !important;
+    justify-content: space-between;
+    border-bottom: 1px solid #efefef;
+    min-height: 32px;
+    padding: 4px;
+    background-color: transparent;
+    box-shadow: none !important;
+}
+
+nav{
+  width: initial;
+}
+
+.datepicker--nav-title {
+  color: #9c9fa2;
+}
+
+.datepicker--nav-title i {
+  font-size: 14px !important;
 }

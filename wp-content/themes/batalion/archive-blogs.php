@@ -3,47 +3,89 @@
   get_header();
 ?>
 
-<h2 class="task-slogan center aim">Блоги</h2>
-<hr style="padding:0;margin: 0; height: 2px; background-color: lightgrey;border: none; color: lightgrey;">
-
-<?php
-  //Блоги
-  $args = array(
-    'post_type' => 'blogs',
-    'posts_per_page' => 12,
-    'publish' => true,
-    'orderby' => 'date',
-    'order' => 'DESC'
-  );
-  $query = new WP_Query( $args );
-  if ( $query->have_posts() ) { ?>
-    <div class="row container pad-top">
-    <?php
-      while ( $query->have_posts() ) {
-        $query->the_post(); ?>
-        <div class="col l4 m6 s12">
-        <?php display_blog_temp(); ?>
-        </div>
-      <?php
-      } //end while
-      if ( $query->max_num_pages > 1 ) { ?>
-        <script>
-          var blogs_ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
-          var blogs_true_posts = '<?php echo serialize( $query->query_vars ); ?>';
-          var blogs_current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
-          var blogs_max_pages = '<?php echo $query->max_num_pages; ?>';
-        </script>
-        <div id="blogs_loadmore" class="col l12 m12 s12 center btn more-btn red">Більше блогів</div>
-        <!--<a class="waves-effect waves-light btn more-btn red">Більше блогів</a>-->
-      <?php
-      } //end if
-      ?>
+<!-- donats section -->
+<section class="container">
+  <div class="row">
+    <div class="col l12 m12 s12 center">
+      <div class="donats-slogan">внески та пожертвування</div>
     </div>
-  <?php
-  } //end if
-  wp_reset_postdata();
-?>
+    <div class="col l12 m12 s12">
+    	<div class="donats-info">Інформація про внески та пожертування подається кожного другого числа нового місяця.</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col l8 m7 s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a class="active" href="#test1">Членські внески</a></li>
+        <li class="tab col s3"><a href="#test2">Пожертвування</a></li>
+      </ul>
 
+    <div class="row">
+    <div id="test1" class="col s12">
+    	      <table class="highlight striped bordered">
+        <thead>
+          <tr>
+              <th>Прізвище Ім’я По-батькові</th>
+              <th>Членський внесок</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Стефанюк Олег Володимирович</td>
+            <td>250 грн.</td>
+          </tr>
+          <tr>
+            <td>Стефанюк Олег Володимирович</td>
+            <td>250 грн.</td>
+          </tr>
+          <tr>
+            <td>Стефанюк Олег Володимирович</td>
+            <td>250 грн.</td>
+          </tr>
+          <tr>
+            <td>Стефанюк Олег Володимирович</td>
+            <td>250 грн.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="test2" class="col s12">
+    	    	      <table class="highlight striped bordered">
+        <thead>
+          <tr>
+              <th>Прізвище Ім’я По-батькові</th>
+              <th>Пожертування</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Стефанюк Олег Володимирович</td>
+            <td>250 грн.</td>
+          </tr>
+          <tr>
+            <td>Стефанюк Олег Володимирович</td>
+            <td>250 грн.</td>
+          </tr>
+          <tr>
+            <td>Стефанюк Олег Володимирович</td>
+            <td>250 грн.</td>
+          </tr>
+          <tr>
+            <td>Стефанюк Олег Володимирович</td>
+            <td>250 грн.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+  	<div class="col l4 m5 s12">
+  		<div class="datepicker-here" data-language='ru' id="airdatepicker"></div>
+  	</div>
+      </div>
+</section>
 
   
 

@@ -76,4 +76,31 @@ jQuery(function($) {
       }
     });
   });
+
+  $('#library_loadmore').click(function() {
+    var data = {
+      'action': 'loadmore',
+      'query': library_true_posts,
+      'page': library_current_page
+    };
+    $.ajax({
+      url: library_ajaxurl, // обработчик
+      data: data, // данные
+      type: 'POST', // тип запроса
+      beforeSend: function() {
+        $(this).text('Завантаження...'); // изменяем текст кнопки, вы также можете добавить прелоадер
+      },
+      success: function(data) {
+        if ( data ) { 
+          $('#library_loadmore').text('Більше публікацій').before(data); // вставляем новые посты
+          library_current_page++; // увеличиваем номер страницы на единицу
+          if (library_current_page == library_max_pages) $("#library_loadmore").remove(); // если последняя страница, удаляем кнопку
+        }
+        else {
+          $('#library_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
+        }
+      }
+    });
+  });
+
 });

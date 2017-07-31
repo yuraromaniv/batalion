@@ -18,7 +18,7 @@
 
 <?php
 
-  if ( $post->ID == 40 || $post->ID == 58 || $post->ID == 69 ) {
+  if ( $post->ID == 40 || $post->ID == 69 ) {
     //our team
     get_template_part('/template-parts/content', 'our-team');
   }

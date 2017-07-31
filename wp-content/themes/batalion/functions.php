@@ -93,9 +93,12 @@
           </div>
         <?php
         }
+        else if ( get_post_type() == "library" ) {
+          display_library_temp();
+        }
         else if ( get_post_type() == "discussions" ) {
           display_discussions_temp();
-        }
+        }        
       } //end while
     } //end if
     wp_reset_postdata();
@@ -106,7 +109,8 @@
   //end get posts using ajax
 
   //template for display events
-  function display_event_temp() {?>
+  function display_event_temp() {
+    global $post; ?>
     <div class="news-block row">
       <a href="<?php the_permalink(); ?>">
       <div class="col l3 m6 s12">
@@ -127,7 +131,8 @@
   }
 
   //template for display blogs
-  function display_blog_temp() { ?>
+  function display_blog_temp() {
+    global $post; ?>
     <div class="iframe-block col m6 s12 l12">
       <a href="<?php the_permalink(); ?>">
         <div style="width: 100%; height: 200px; background-image: url(<?php the_post_thumbnail_url('medium'); ?>);background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
@@ -140,8 +145,18 @@
   <?php
   }
 
+  //template for display library materials
+  function display_library_temp() {
+    global $post; ?>
+    <li class="">
+      <a href="<?php echo wp_get_attachment_url( get_post_meta( $post->ID, "file", true ) ); ?>"><?php the_title(); ?></a>
+    </li>
+  <?php
+  }
+
   //template for display discussions
-  function display_discussions_temp() { ?>
+  function display_discussions_temp() {
+    global $post; ?>
     <div class="col l12 m12 s12">
       <div class="news-desc">
         <div class="news-desc-main archive-news">

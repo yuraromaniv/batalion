@@ -32,7 +32,7 @@
     
     <div class="offset-l1 col l4 m12 s12">
       <div class="subs-slogan">Стати членом</div>
-      <form class="center" id="callback-form">
+      <form id="callback-form" class="center">
         <input class="application-field" type="text" name="user_name" placeholder="Ім'я" required /><br />
         <input class="application-field" type="text" name="user_surname" placeholder="Прізвище" required /><br />
         <input class="application-field" type="tel" name="user_phone" placeholder="Номер телефону" required /><br />

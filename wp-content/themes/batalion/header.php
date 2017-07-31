@@ -128,7 +128,7 @@
       <li><a href="<?php echo get_post_type_archive_link('events'); ?>">Події</a></li>
       <li><a href="<?php echo get_post_type_archive_link('blogs'); ?>">Блог</a></li>
       <li><a href="<?php the_permalink(50); ?>">Членство</a></li>
-      <li><a href="<?php the_permalink(45); ?>">Бібліотека</a></li>
+      <li><a href="<?php echo get_post_type_archive_link('library'); ?>">Бібліотека</a></li>
       <li><a href="<?php echo get_post_type_archive_link('discussions'); ?>">Обговорення</a></li>
       <li><a href="<?php the_permalink(37); ?>">Контакти</a></li>
     </ul>
@@ -150,10 +150,11 @@
   <div id="modal1" class="modal">
     <div class="modal-content">
       <h4>Залиште ваше запитання!</h4>
-      <form class="question-form center">
-        <textarea placeholder="Введіть текст ..."></textarea>
-          <button class="btn waves-effect waves-light" type="submit" name="action">НАДІСЛАТИ</button>
+      <form id="question-form" class="question-form center">
+        <textarea name="question_text" placeholder="Введіть текст ..."></textarea>
+        <button type="submit" id="question-form-button" class="btn waves-effect waves-light">НАДІСЛАТИ</button>
       </form>
+      <span id="question-form-message"></span>
     </div>
   </div>
       <!-- Modal Trigger -->
@@ -167,7 +168,7 @@
       <li><a href="<?php echo get_post_type_archive_link('events'); ?>">Події</a></li>
       <li><a href="<?php echo get_post_type_archive_link('blogs'); ?>">Блог</a></li>
       <li><a href="<?php the_permalink(50); ?>">Членство</a></li>
-      <li><a href="<?php the_permalink(45); ?>">Бібліотека</a></li>
+      <li><a href="<?php echo get_post_type_archive_link('library'); ?>">Бібліотека</a></li>
       <li><a href="<?php echo get_post_type_archive_link('discussions'); ?>">Обговорення</a></li>
       <li><a href="<?php the_permalink(37); ?>">Контакти</a></li>
     </ul>
@@ -175,7 +176,7 @@
   <!-- Dropdown Structure -->
   <ul id="dropdown1" class="dropdown-content">
     <li><a href="<?php the_permalink(40); ?>">Про нас</a></li>
-    <li><a href="<?php the_permalink(58); ?>">Наші погляди</a></li>
+    <li><a href="<?php echo get_post_type_archive_link('our_looks'); ?>">Наші погляди</a></li>
     <li><a href="<?php the_permalink(69); ?>">Аналіз сучасого стану</a></li>
     <li><a href="#">Внески/Пожертування</a></li>
   </ul>

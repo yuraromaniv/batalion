@@ -1,5 +1,8 @@
 # batalion
 
+ver. 0.8.4
+  - додав сторінку "Внески/Пожертування" (archive-donations.php)
+
 ver. 0.8.3
   - Підключив сторінки:
     - "Наші погляди" (archive-our_looks.php)

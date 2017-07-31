@@ -178,7 +178,7 @@
     <li><a href="<?php the_permalink(40); ?>">Про нас</a></li>
     <li><a href="<?php echo get_post_type_archive_link('our_looks'); ?>">Наші погляди</a></li>
     <li><a href="<?php the_permalink(69); ?>">Аналіз сучасого стану</a></li>
-    <li><a href="#">Внески/Пожертування</a></li>
+    <li><a href="<?php echo get_post_type_archive_link('donations'); ?>">Внески/Пожертування</a></li>
   </ul>
   <div class="pre-post"></div>
 </header>

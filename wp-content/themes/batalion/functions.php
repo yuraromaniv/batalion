@@ -173,13 +173,12 @@
   }
 
 
-/*
 //hide not used fields
   function remove_menus() {
     remove_menu_page( 'edit.php' );                   //Записи
-    remove_menu_page( 'edit.php?post_type=page' );    //Сторінки
-    remove_menu_page( 'edit-comments.php' );          //Комментарі
-    remove_menu_page( 'tools.php' );                  //Інструменти
+    //remove_menu_page( 'edit.php?post_type=page' );    //Сторінки
+    //remove_menu_page( 'edit-comments.php' );          //Комментарі
+    //remove_menu_page( 'tools.php' );                  //Інструменти
     
     //remove_menu_page( 'index.php' );                  //Консоль
     //remove_menu_page( 'upload.php' );                 //Медіафайли
@@ -190,6 +189,5 @@
   }
   add_action( 'admin_menu', 'remove_menus' );
 //end hide not used fields
-*/
 
 ?>

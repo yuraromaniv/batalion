@@ -105,6 +105,58 @@
   add_action( 'init', 'register_cpt_blogs' );
 
 
+  function register_cpt_library() {
+    $labels = array( 
+      'name' => _x( 'Бібліотека', 'library' ),
+      'singular_name' => _x( 'Бібліотека', 'library' ),
+      'add_new' => _x( 'Додати матеріал', 'library' ),
+      'add_new_item' => _x( 'Додати новий матеріал бібліотеки', 'library' ),
+      'edit_item' => _x( 'Редагувати матеріал', 'library' ),
+      'new_item' => _x( 'Нові матеріали', 'library' ),
+      'view_item' => _x( 'Переглянути', 'library' ),
+      'search_items' => _x( 'Пошук', 'library' ),
+      'not_found' => _x( 'Матеріалів не знайдено', 'library' ),
+      'not_found_in_trash' => _x( 'Матеріалів в корзині не знайдено', 'library' ),
+      'parent_item_colon' => _x( 'Батьківський елемент', 'library' ),
+      'all_items' => _x( 'Всі матеріали бібліотеки', 'library' ),
+      'name_admin_bar' => _x( 'Матеріал бібліотеки', 'library'),    //назва в адмін барі (тулбарі)
+    );
+    $args = array( 
+      'labels' => $labels,
+      'description' => 'Бібліотека',
+      'public' => true,
+      'publicly_queryable' => true,
+      'exclude_from_search' => false,
+      'show_ui' => true,
+      'show_in_menu' => true,
+      'show_in_nav_menus' => true,
+      'menu_position' => 6,
+      'menu_icon' => 'dashicons-book',
+      'capability_type' => 'librar',    //автоматично створює потрібні повноваження
+      'capabilities' => array(
+        'edit_post' => 'edit_librar',
+        'read_post' => 'read_librar',
+        'delete_post' => 'delete_librar',
+        'edit_posts' => 'edit_library',
+        'edit_others_posts' => 'edit_other_library',  //дозволяє редагувати записи, які належать іншим авторам
+        'publish_posts' => 'publish_library',
+        'read_private_posts' => 'read_private_library',
+      ),
+      'map_meta_cap' => true,
+      'hierarchical' => true,
+      'supports' => array( 'title', 'revisions' ), // 'author', , 'thumbnail', 'editor', 'comments'
+      //'taxonomies' => array( 'post_tag', 'category' ), 
+      'has_archive' => true,
+      'rewrite' => true,
+      'query_var' => true,
+      'can_export' => true
+      //'delete_with_user' => true    //видаляти записи цього типу, які належать користувачеві, який видаляється
+    );
+    register_post_type( 'library', $args );
+  }
+  add_action( 'init', 'register_cpt_library' );
+
+
   function register_cpt_discussions() {
     $labels = array( 
       'name' => _x( 'Обговорення', 'discussions' ),
@@ -130,7 +182,7 @@
       'show_ui' => true,
       'show_in_menu' => true,
       'show_in_nav_menus' => true,
-      'menu_position' => 6,
+      'menu_position' => 7,
       'menu_icon' => 'dashicons-format-chat',
       'capability_type' => 'discussion',    //автоматично створює потрібні повноваження
       'capabilities' => array(
@@ -170,7 +222,7 @@
       'not_found' => _x( 'Цілі та завдання не знайдено', 'tasks' ),
       'not_found_in_trash' => _x( 'Цілі та завдання в корзині не знайдено', 'tasks' ),
       'parent_item_colon' => _x( 'Батьківський елемент', 'tasks' ),
-      'all_items' => _x( 'Всі цілі та завданняя', 'tasks' ),
+      'all_items' => _x( 'Всі цілі та завдання', 'tasks' ),
       'name_admin_bar' => _x( 'Ціль та завдання', 'tasks'),    //назва в адмін барі (тулбарі)
     );
     $args = array( 
@@ -182,7 +234,7 @@
       'show_ui' => true,
       'show_in_menu' => true,
       'show_in_nav_menus' => true,
-      'menu_position' => 7,
+      'menu_position' => 8,
       'menu_icon' => 'dashicons-editor-ul',
       'capability_type' => 'task',    //автоматично створює потрібні повноваження
       'capabilities' => array(
@@ -207,6 +259,58 @@
     register_post_type( 'tasks', $args );
   }
   add_action( 'init', 'register_cpt_tasks' );
+
+
+  function register_cpt_donations() {
+    $labels = array( 
+      'name' => _x( 'Внески та пожертвування', 'donations' ),
+      'singular_name' => _x( 'Внески та пожертвування', 'donations' ),
+      'add_new' => _x( 'Додати внесок або пожертування', 'donations' ),
+      'add_new_item' => _x( 'Додати нові внески та пожертвування', 'donations' ),
+      'edit_item' => _x( 'Редагувати внески та пожертвування', 'donations' ),
+      'new_item' => _x( 'Нові внески та пожертвування', 'donations' ),
+      'view_item' => _x( 'Переглянути', 'donations' ),
+      'search_items' => _x( 'Пошук', 'donations' ),
+      'not_found' => _x( 'Внесків та пожертвувань не знайдено', 'donations' ),
+      'not_found_in_trash' => _x( 'Внесків та пожертвувань в корзині не знайдено', 'donations' ),
+      'parent_item_colon' => _x( 'Батьківський елемент', 'donations' ),
+      'all_items' => _x( 'Всі внески та пожертвування', 'donations' ),
+      'name_admin_bar' => _x( 'Внесок та пожертвування', 'donations'),    //назва в адмін барі (тулбарі)
+    );
+    $args = array( 
+      'labels' => $labels,
+      'description' => 'Внески та пожертвування',
+      'public' => true,
+      'publicly_queryable' => true,
+      'exclude_from_search' => false,
+      'show_ui' => true,
+      'show_in_menu' => true,
+      'show_in_nav_menus' => true,
+      'menu_position' => 4,
+      'menu_icon' => 'dashicons-format-aside',
+      'capability_type' => 'donation',    //автоматично створює потрібні повноваження
+      'capabilities' => array(
+        'edit_post' => 'edit_donation',
+        'read_post' => 'read_donation',
+        'delete_post' => 'delete_donation',
+        'edit_posts' => 'edit_donations',
+        'edit_others_posts' => 'edit_other_donations',  //дозволяє редагувати записи, які належать іншим авторам
+        'publish_posts' => 'publish_donations',
+        'read_private_posts' => 'read_private_donations',
+      ),
+      'map_meta_cap' => true,
+      'hierarchical' => true,
+      'supports' => array( 'title' ), // 'author', 'thumbnail', 'editor', 'revisions', 'comments'
+      'taxonomies' => array( 'category' ), //'post_tag', 
+      'has_archive' => true,
+      'rewrite' => true,
+      'query_var' => true,
+      'can_export' => true
+      //'delete_with_user' => true    //видаляти записи цього типу, які належать користувачеві, який видаляється
+    );
+    register_post_type( 'donations', $args );
+  }
+  add_action( 'init', 'register_cpt_donations' );
 
 
   function register_cpt_teams() {
@@ -234,7 +338,7 @@
       'show_ui' => true,
       'show_in_menu' => true,
       'show_in_nav_menus' => true,
-      'menu_position' => 8,
+      'menu_position' => 9,
       'menu_icon' => 'dashicons-groups',
       'capability_type' => 'team',    //автоматично створює потрібні повноваження
       'capabilities' => array(
@@ -259,58 +363,6 @@
     register_post_type( 'teams', $args );
   }
   add_action( 'init', 'register_cpt_teams' );
-
-
-  function register_cpt_library() {
-    $labels = array( 
-      'name' => _x( 'Бібліотека', 'library' ),
-      'singular_name' => _x( 'Бібліотека', 'library' ),
-      'add_new' => _x( 'Додати матеріал', 'library' ),
-      'add_new_item' => _x( 'Додати новий матеріал бібліотеки', 'library' ),
-      'edit_item' => _x( 'Редагувати матеріал', 'library' ),
-      'new_item' => _x( 'Нові матеріали', 'library' ),
-      'view_item' => _x( 'Переглянути', 'library' ),
-      'search_items' => _x( 'Пошук', 'library' ),
-      'not_found' => _x( 'Матеріалів не знайдено', 'library' ),
-      'not_found_in_trash' => _x( 'Матеріалів в корзині не знайдено', 'library' ),
-      'parent_item_colon' => _x( 'Батьківський елемент', 'library' ),
-      'all_items' => _x( 'Всі матеріали бібліотеки', 'library' ),
-      'name_admin_bar' => _x( 'Матеріал бібліотеки', 'library'),    //назва в адмін барі (тулбарі)
-    );
-    $args = array( 
-      'labels' => $labels,
-      'description' => 'Бібліотека',
-      'public' => true,
-      'publicly_queryable' => true,
-      'exclude_from_search' => false,
-      'show_ui' => true,
-      'show_in_menu' => true,
-      'show_in_nav_menus' => true,
-      'menu_position' => 9,
-      'menu_icon' => 'dashicons-book',
-      'capability_type' => 'librar',    //автоматично створює потрібні повноваження
-      'capabilities' => array(
-        'edit_post' => 'edit_librar',
-        'read_post' => 'read_librar',
-        'delete_post' => 'delete_librar',
-        'edit_posts' => 'edit_library',
-        'edit_others_posts' => 'edit_other_library',  //дозволяє редагувати записи, які належать іншим авторам
-        'publish_posts' => 'publish_library',
-        'read_private_posts' => 'read_private_library',
-      ),
-      'map_meta_cap' => true,
-      'hierarchical' => true,
-      'supports' => array( 'title', 'revisions' ), // 'author', , 'thumbnail', 'editor', 'comments'
-      //'taxonomies' => array( 'post_tag', 'category' ), 
-      'has_archive' => true,
-      'rewrite' => true,
-      'query_var' => true,
-      'can_export' => true
-      //'delete_with_user' => true    //видаляти записи цього типу, які належать користувачеві, який видаляється
-    );
-    register_post_type( 'library', $args );
-  }
-  add_action( 'init', 'register_cpt_library' );
 
 
   function register_cpt_partners() {

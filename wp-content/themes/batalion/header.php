@@ -47,11 +47,6 @@
       .member-desc{
         margin-bottom: 20px;
       }
-      .modal-trigger{
-        position: fixed;
-        top: 500px;
-        right: 30px;
-      }
     }
     @media screen and (min-width: 1024px) and (max-width: 1240px)  {
       .parallax-container{
@@ -68,11 +63,6 @@
       }
       .border-color{
         border-right: none;
-      }
-      .modal-trigger{
-        position: fixed;
-        top: 400px;
-        right: 30px;
       }
     }
     @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -91,20 +81,10 @@
       .border-color{
         border-right: none;
       }
-      .modal-trigger{
-        position: fixed;
-        top: 300px;
-        right: 30px;
-      }
     }
     @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
       .parallax-container{
         height: auto;
-      }
-      .modal-trigger{
-        position: fixed;
-        top: 250px;
-        right: 30px;
       }
     }
     @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {

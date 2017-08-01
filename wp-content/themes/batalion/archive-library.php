@@ -28,7 +28,7 @@
           var library_current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
           var library_max_pages = '<?php echo $query->max_num_pages; ?>';
         </script>
-        <div id="library_loadmore" class="col l12 m12 s12 center btn more-btn red">Більше публікацій</div>
+        <div id="library_loadmore" class="offset-l3 offset-m3 offset-s3 col l6 m6 s6 center btn more-btn red">Більше публікацій</div>
         <!--<a class="waves-effect waves-light btn more-btn red">Більше публікацій</a>-->
       <?php
       } //end if

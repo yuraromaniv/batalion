@@ -135,7 +135,7 @@
     global $post; ?>
     <div class="iframe-block col m6 s12 l12">
       <a href="<?php the_permalink(); ?>">
-        <div style="width: 100%; height: 200px; background-image: url(<?php the_post_thumbnail_url('medium'); ?>);background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+        <div style="width: 100%; height: 200px; background-image: url(<?php the_post_thumbnail_url('medium'); ?>);background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
         <div class="iframe-desc">
           <?php echo short_post_title(100); ?>
         </div>

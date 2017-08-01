@@ -612,8 +612,8 @@ a {
 
 .modal-trigger{
   position: fixed;
-  top: 500px;
-  right: 30px;
+  bottom: 5%;
+  right: 2%;
 }
 
 .question-form textarea{

@@ -76,37 +76,7 @@
 
 
   //get posts using ajax
-  function true_load_posts() {
-    $args = unserialize( stripslashes( $_POST['query'] ) );
-    $args['paged'] = $_POST['page'] + 1; // следующая страница
-    $args['post_status'] = 'publish';
-    $q = new WP_Query( $args );
-    if ( $q->have_posts() ) {
-      while ( $q->have_posts() ) {
-        $q->the_post();
-        if ( get_post_type() == "events" ) {
-          display_event_temp();
-        }
-        else if ( get_post_type() == "blogs" ) { ?>
-          <div class="col l4 m6 s12">
-            <?php display_blog_temp(); ?>
-          </div>
-        <?php
-        }
-        else if ( get_post_type() == "library" ) {
-          display_library_temp();
-        }
-        else if ( get_post_type() == "discussions" ) {
-          display_discussions_temp();
-        }        
-      } //end while
-    } //end if
-    wp_reset_postdata();
-    die();
-  }
-  add_action('wp_ajax_loadmore', 'true_load_posts');
-  add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
-  //end get posts using ajax
+  require 'template-parts/ajax_loadmore.php';
 
   //template for display events
   function display_event_temp() {
@@ -175,7 +145,7 @@
 
 //hide not used fields
   function remove_menus() {
-    remove_menu_page( 'edit.php' );                   //Записи
+    remove_menu_page( 'edit.php' );                     //Записи
     //remove_menu_page( 'edit.php?post_type=page' );    //Сторінки
     //remove_menu_page( 'edit-comments.php' );          //Комментарі
     //remove_menu_page( 'tools.php' );                  //Інструменти

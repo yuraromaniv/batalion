@@ -103,4 +103,30 @@ jQuery(function($) {
     });
   });
 
+  $('.datepicker--cell').click(function() {
+    var data = {
+      'action': 'loadmore',
+      'year': $('.datepicker--nav-title').text(),
+      'month': $(this).attr("data-month"),
+      'post_type': post_type
+    };
+    $.ajax({
+      url: donations_ajaxurl, // обработчик
+      data: data, // данные
+      //dataType: 'json',
+      type: 'POST', // тип запроса
+      success: function(data) {
+        if (data) {
+          console.log(data);
+          /*
+          $('#donations-table').html("");
+          $('#contributions-table-table').html("");
+          $('#donations-table').html(data[0]);
+          $('#contributions-table').html(data[0]);
+          */
+        }
+      }
+    });
+  });
+
 });

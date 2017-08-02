@@ -39,7 +39,7 @@
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/init.js"></script>
 
 <!--Ajax підuрузка постів -->
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/loadmore.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/ajax_loadmore.js"></script>
 
 <script type="text/javascript">
   $(".button-collapse").sideNav();

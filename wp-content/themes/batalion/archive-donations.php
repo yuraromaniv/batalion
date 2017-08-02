@@ -52,7 +52,7 @@
                   <th>Членський внесок</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="contributions-table">
               <?php
               while ( $query->have_posts() ) {
                 $query->the_post(); ?>
@@ -90,7 +90,7 @@
                   <th>Пожертування</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="donations-table">
               <?php
               while ( $query->have_posts() ) {
                 $query->the_post(); ?>
@@ -114,7 +114,10 @@
   </div>
 </section>
 
-  
+<script>
+  var donations_ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
+  var post_type = "donations";
+</script>
 
 <?php
   //our team

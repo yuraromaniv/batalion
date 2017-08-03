@@ -74,7 +74,7 @@
       } //end if
       wp_reset_postdata();
 
-      $result = array();  //змінна для збурігання внесків та пожертвувань
+      $result = array();  //змінна для зберігання внесків та пожертвувань
       if (!empty($contributions) ) {
         array_push($result, array('Внески' => $contributions) );
       }

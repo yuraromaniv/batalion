@@ -60,7 +60,7 @@
 <script>
   $('#airdatepicker').datepicker({
     view: "months",
-    minView: "months"
+    minView: "months",
   })
 </script>
 

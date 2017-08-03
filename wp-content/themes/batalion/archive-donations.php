@@ -48,6 +48,7 @@
             <table class="highlight striped bordered">
               <thead>
                 <tr>
+                  <th>Дата</th>
                   <th>Прізвище Ім’я По-батькові</th>
                   <th>Членський внесок</th>
                 </tr>
@@ -57,6 +58,7 @@
               while ( $query->have_posts() ) {
                 $query->the_post(); ?>
                 <tr>
+                  <td>17.01.2017</td>
                   <td><?php the_title(); ?></td>
                   <td><?php echo get_post_meta( $post->ID, "payment_amount", true ); ?> грн.</td>
                 </tr>
@@ -86,6 +88,7 @@
             <table class="highlight striped bordered">
               <thead>
                 <tr>
+                  <th>Дата</th>
                   <th>Прізвище Ім’я По-батькові</th>
                   <th>Пожертування</th>
                 </tr>
@@ -95,6 +98,7 @@
               while ( $query->have_posts() ) {
                 $query->the_post(); ?>
                 <tr>
+                  <td>17.01.2017</td>
                   <td><?php the_title(); ?></td>
                   <td><?php echo get_post_meta( $post->ID, "payment_amount", true ); ?> грн.</td>
                 </tr>

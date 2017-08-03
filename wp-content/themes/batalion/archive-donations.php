@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col l8 m7 s12">
+    <div class="col l12 m12 s12">
       <ul class="tabs">
         <li class="tab col s3"><a class="active" href="#test1">Членські внески</a></li>
         <li class="tab col s3"><a href="#test2">Пожертвування</a></li>
@@ -114,9 +114,6 @@
         } //end if
         wp_reset_postdata(); ?>
       </div>
-    </div>
-    <div class="col l4 m5 s12">
-      <div class="datepicker-here" data-language='ru' id="airdatepicker"></div>
     </div>
   </div>
 </section>

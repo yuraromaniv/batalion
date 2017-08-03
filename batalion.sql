@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.15.7
+-- version 4.4.15.5
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Час створення: Сер 03 2017 р., 22:36
--- Версія сервера: 5.6.31
--- Версія PHP: 7.0.8
+-- Час створення: Сер 03 2017 р., 23:39
+-- Версія сервера: 5.5.48
+-- Версія PHP: 7.0.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `bt_options` (
   `option_name` varchar(191) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   `option_value` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `autoload` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'yes'
-) ENGINE=InnoDB AUTO_INCREMENT=500 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=510 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
 -- Дамп даних таблиці `bt_options`
@@ -255,8 +255,6 @@ INSERT INTO `bt_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (163, 'user_role_editor', 'a:1:{s:11:"ure_version";s:6:"4.35.2";}', 'yes'),
 (164, 'bt_backup_user_roles', 'a:5:{s:13:"administrator";a:2:{s:4:"name";s:13:"Administrator";s:12:"capabilities";a:61:{s:13:"switch_themes";b:1;s:11:"edit_themes";b:1;s:16:"activate_plugins";b:1;s:12:"edit_plugins";b:1;s:10:"edit_users";b:1;s:10:"edit_files";b:1;s:14:"manage_options";b:1;s:17:"moderate_comments";b:1;s:17:"manage_categories";b:1;s:12:"manage_links";b:1;s:12:"upload_files";b:1;s:6:"import";b:1;s:15:"unfiltered_html";b:1;s:10:"edit_posts";b:1;s:17:"edit_others_posts";b:1;s:20:"edit_published_posts";b:1;s:13:"publish_posts";b:1;s:10:"edit_pages";b:1;s:4:"read";b:1;s:8:"level_10";b:1;s:7:"level_9";b:1;s:7:"level_8";b:1;s:7:"level_7";b:1;s:7:"level_6";b:1;s:7:"level_5";b:1;s:7:"level_4";b:1;s:7:"level_3";b:1;s:7:"level_2";b:1;s:7:"level_1";b:1;s:7:"level_0";b:1;s:17:"edit_others_pages";b:1;s:20:"edit_published_pages";b:1;s:13:"publish_pages";b:1;s:12:"delete_pages";b:1;s:19:"delete_others_pages";b:1;s:22:"delete_published_pages";b:1;s:12:"delete_posts";b:1;s:19:"delete_others_posts";b:1;s:22:"delete_published_posts";b:1;s:20:"delete_private_posts";b:1;s:18:"edit_private_posts";b:1;s:18:"read_private_posts";b:1;s:20:"delete_private_pages";b:1;s:18:"edit_private_pages";b:1;s:18:"read_private_pages";b:1;s:12:"delete_users";b:1;s:12:"create_users";b:1;s:17:"unfiltered_upload";b:1;s:14:"edit_dashboard";b:1;s:14:"update_plugins";b:1;s:14:"delete_plugins";b:1;s:15:"install_plugins";b:1;s:13:"update_themes";b:1;s:14:"install_themes";b:1;s:11:"update_core";b:1;s:10:"list_users";b:1;s:12:"remove_users";b:1;s:13:"promote_users";b:1;s:18:"edit_theme_options";b:1;s:13:"delete_themes";b:1;s:6:"export";b:1;}}s:6:"editor";a:2:{s:4:"name";s:6:"Editor";s:12:"capabilities";a:34:{s:17:"moderate_comments";b:1;s:17:"manage_categories";b:1;s:12:"manage_links";b:1;s:12:"upload_files";b:1;s:15:"unfiltered_html";b:1;s:10:"edit_posts";b:1;s:17:"edit_others_posts";b:1;s:20:"edit_published_posts";b:1;s:13:"publish_posts";b:1;s:10:"edit_pages";b:1;s:4:"read";b:1;s:7:"level_7";b:1;s:7:"level_6";b:1;s:7:"level_5";b:1;s:7:"level_4";b:1;s:7:"level_3";b:1;s:7:"level_2";b:1;s:7:"level_1";b:1;s:7:"level_0";b:1;s:17:"edit_others_pages";b:1;s:20:"edit_published_pages";b:1;s:13:"publish_pages";b:1;s:12:"delete_pages";b:1;s:19:"delete_others_pages";b:1;s:22:"delete_published_pages";b:1;s:12:"delete_posts";b:1;s:19:"delete_others_posts";b:1;s:22:"delete_published_posts";b:1;s:20:"delete_private_posts";b:1;s:18:"edit_private_posts";b:1;s:18:"read_private_posts";b:1;s:20:"delete_private_pages";b:1;s:18:"edit_private_pages";b:1;s:18:"read_private_pages";b:1;}}s:6:"author";a:2:{s:4:"name";s:6:"Author";s:12:"capabilities";a:10:{s:12:"upload_files";b:1;s:10:"edit_posts";b:1;s:20:"edit_published_posts";b:1;s:13:"publish_posts";b:1;s:4:"read";b:1;s:7:"level_2";b:1;s:7:"level_1";b:1;s:7:"level_0";b:1;s:12:"delete_posts";b:1;s:22:"delete_published_posts";b:1;}}s:11:"contributor";a:2:{s:4:"name";s:11:"Contributor";s:12:"capabilities";a:5:{s:10:"edit_posts";b:1;s:4:"read";b:1;s:7:"level_1";b:1;s:7:"level_0";b:1;s:12:"delete_posts";b:1;}}s:10:"subscriber";a:2:{s:4:"name";s:10:"Subscriber";s:12:"capabilities";a:2:{s:4:"read";b:1;s:7:"level_0";b:1;}}}', 'no'),
 (165, 'ure_tasks_queue', 'a:0:{}', 'yes'),
-(200, '_site_transient_timeout_browser_ba081c70c62b1a73f7586809b37ba98f', '1501578978', 'no'),
-(201, '_site_transient_browser_ba081c70c62b1a73f7586809b37ba98f', 'a:9:{s:8:"platform";s:7:"Windows";s:4:"name";s:6:"Chrome";s:7:"version";s:13:"59.0.3071.115";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'no'),
 (215, 'duplicate_post_copytitle', '1', 'yes'),
 (216, 'duplicate_post_copydate', '', 'yes'),
 (217, 'duplicate_post_copystatus', '', 'yes'),
@@ -332,8 +330,8 @@ INSERT INTO `bt_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (463, 'limit_login_captcha', 'checked', 'yes'),
 (464, 'limit_login_install_date', '2017-08-03 19:14:45', 'yes'),
 (465, '_cerber_off', 'a:3:{s:7:"Version";s:3:"4.9";s:1:"v";i:1501787690;s:1:"u";i:1;}', 'no'),
-(468, 'limit_login_retries', 'a:1:{s:9:"127.0.0.1";i:1;}', 'no'),
-(469, 'limit_login_retries_valid', 'a:1:{s:9:"127.0.0.1";i:1501831206;}', 'no'),
+(468, 'limit_login_retries', 'a:1:{s:9:"127.0.0.1";i:2;}', 'no'),
+(469, 'limit_login_retries_valid', 'a:1:{s:9:"127.0.0.1";i:1501813295;}', 'no'),
 (483, 'loginlockdownAdminOptions', 'a:6:{s:17:"max_login_retries";i:3;s:14:"retries_within";i:5;s:14:"lockout_length";i:60;s:25:"lockout_invalid_usernames";s:2:"no";s:17:"mask_login_errors";s:2:"no";s:16:"show_credit_link";s:3:"yes";}', 'yes'),
 (484, 'loginlockdownmsrunonce', 'done', 'no'),
 (486, '_site_transient_update_plugins', 'O:8:"stdClass":5:{s:12:"last_checked";i:1501788375;s:7:"checked";a:10:{s:30:"advanced-custom-fields/acf.php";s:6:"4.4.11";s:19:"akismet/akismet.php";s:5:"3.3.3";s:22:"cyr3lat/cyr-to-lat.php";s:3:"3.5";s:32:"disqus-comment-system/disqus.php";s:4:"2.87";s:33:"duplicate-post/duplicate-post.php";s:3:"3.2";s:9:"hello.php";s:3:"1.6";s:63:"limit-login-attempts-reloaded/limit-login-attempts-reloaded.php";s:5:"2.6.1";s:35:"rename-wp-login/rename-wp-login.php";s:5:"2.5.5";s:37:"user-role-editor/user-role-editor.php";s:6:"4.35.2";s:23:"wp-cerber/wp-cerber.php";s:3:"4.9";}s:8:"response";a:2:{s:19:"akismet/akismet.php";O:8:"stdClass":8:{s:2:"id";s:21:"w.org/plugins/akismet";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:5:"3.3.4";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:56:"https://downloads.wordpress.org/plugin/akismet.3.3.4.zip";s:6:"tested";s:5:"4.8.1";s:13:"compatibility";O:8:"stdClass":0:{}}s:37:"user-role-editor/user-role-editor.php";O:8:"stdClass":8:{s:2:"id";s:30:"w.org/plugins/user-role-editor";s:4:"slug";s:16:"user-role-editor";s:6:"plugin";s:37:"user-role-editor/user-role-editor.php";s:11:"new_version";s:6:"4.35.3";s:3:"url";s:47:"https://wordpress.org/plugins/user-role-editor/";s:7:"package";s:66:"https://downloads.wordpress.org/plugin/user-role-editor.4.35.3.zip";s:6:"tested";s:3:"4.8";s:13:"compatibility";O:8:"stdClass":0:{}}}s:12:"translations";a:2:{i:0;a:7:{s:4:"type";s:6:"plugin";s:4:"slug";s:14:"duplicate-post";s:8:"language";s:2:"uk";s:7:"version";s:3:"3.2";s:7:"updated";s:19:"2017-05-16 11:29:33";s:7:"package";s:76:"https://downloads.wordpress.org/translation/plugin/duplicate-post/3.2/uk.zip";s:10:"autoupdate";b:1;}i:1;a:7:{s:4:"type";s:6:"plugin";s:4:"slug";s:9:"wp-cerber";s:8:"language";s:2:"uk";s:7:"version";s:3:"4.1";s:7:"updated";s:19:"2017-01-26 02:02:07";s:7:"package";s:71:"https://downloads.wordpress.org/translation/plugin/wp-cerber/4.1/uk.zip";s:10:"autoupdate";b:1;}}s:9:"no_update";a:8:{s:30:"advanced-custom-fields/acf.php";O:8:"stdClass":6:{s:2:"id";s:36:"w.org/plugins/advanced-custom-fields";s:4:"slug";s:22:"advanced-custom-fields";s:6:"plugin";s:30:"advanced-custom-fields/acf.php";s:11:"new_version";s:6:"4.4.11";s:3:"url";s:53:"https://wordpress.org/plugins/advanced-custom-fields/";s:7:"package";s:72:"https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.11.zip";}s:22:"cyr3lat/cyr-to-lat.php";O:8:"stdClass":6:{s:2:"id";s:21:"w.org/plugins/cyr3lat";s:4:"slug";s:7:"cyr3lat";s:6:"plugin";s:22:"cyr3lat/cyr-to-lat.php";s:11:"new_version";s:3:"3.5";s:3:"url";s:38:"https://wordpress.org/plugins/cyr3lat/";s:7:"package";s:54:"https://downloads.wordpress.org/plugin/cyr3lat.3.5.zip";}s:32:"disqus-comment-system/disqus.php";O:8:"stdClass":6:{s:2:"id";s:35:"w.org/plugins/disqus-comment-system";s:4:"slug";s:21:"disqus-comment-system";s:6:"plugin";s:32:"disqus-comment-system/disqus.php";s:11:"new_version";s:4:"2.87";s:3:"url";s:52:"https://wordpress.org/plugins/disqus-comment-system/";s:7:"package";s:69:"https://downloads.wordpress.org/plugin/disqus-comment-system.2.87.zip";}s:33:"duplicate-post/duplicate-post.php";O:8:"stdClass":6:{s:2:"id";s:28:"w.org/plugins/duplicate-post";s:4:"slug";s:14:"duplicate-post";s:6:"plugin";s:33:"duplicate-post/duplicate-post.php";s:11:"new_version";s:3:"3.2";s:3:"url";s:45:"https://wordpress.org/plugins/duplicate-post/";s:7:"package";s:61:"https://downloads.wordpress.org/plugin/duplicate-post.3.2.zip";}s:9:"hello.php";O:8:"stdClass":6:{s:2:"id";s:25:"w.org/plugins/hello-dolly";s:4:"slug";s:11:"hello-dolly";s:6:"plugin";s:9:"hello.php";s:11:"new_version";s:3:"1.6";s:3:"url";s:42:"https://wordpress.org/plugins/hello-dolly/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip";}s:63:"limit-login-attempts-reloaded/limit-login-attempts-reloaded.php";O:8:"stdClass":6:{s:2:"id";s:43:"w.org/plugins/limit-login-attempts-reloaded";s:4:"slug";s:29:"limit-login-attempts-reloaded";s:6:"plugin";s:63:"limit-login-attempts-reloaded/limit-login-attempts-reloaded.php";s:11:"new_version";s:5:"2.6.1";s:3:"url";s:60:"https://wordpress.org/plugins/limit-login-attempts-reloaded/";s:7:"package";s:78:"https://downloads.wordpress.org/plugin/limit-login-attempts-reloaded.2.6.1.zip";}s:35:"rename-wp-login/rename-wp-login.php";O:8:"stdClass":6:{s:2:"id";s:29:"w.org/plugins/rename-wp-login";s:4:"slug";s:15:"rename-wp-login";s:6:"plugin";s:35:"rename-wp-login/rename-wp-login.php";s:11:"new_version";s:5:"2.5.5";s:3:"url";s:46:"https://wordpress.org/plugins/rename-wp-login/";s:7:"package";s:64:"https://downloads.wordpress.org/plugin/rename-wp-login.2.5.5.zip";}s:23:"wp-cerber/wp-cerber.php";O:8:"stdClass":6:{s:2:"id";s:23:"w.org/plugins/wp-cerber";s:4:"slug";s:9:"wp-cerber";s:6:"plugin";s:23:"wp-cerber/wp-cerber.php";s:11:"new_version";s:3:"4.9";s:3:"url";s:40:"https://wordpress.org/plugins/wp-cerber/";s:7:"package";s:56:"https://downloads.wordpress.org/plugin/wp-cerber.4.9.zip";}}}', 'no'),
@@ -348,7 +346,15 @@ INSERT INTO `bt_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (496, 'limit_login_whitelist_usernames', 'a:0:{}', 'yes'),
 (497, 'limit_login_blacklist', 'a:0:{}', 'yes'),
 (498, 'limit_login_blacklist_usernames', 'a:0:{}', 'yes'),
-(499, 'limit_login_lockout_notify', 'log', 'yes');
+(499, 'limit_login_lockout_notify', 'log', 'yes'),
+(500, '_site_transient_timeout_browser_ba081c70c62b1a73f7586809b37ba98f', '1502396514', 'no'),
+(501, '_site_transient_browser_ba081c70c62b1a73f7586809b37ba98f', 'a:9:{s:8:"platform";s:7:"Windows";s:4:"name";s:6:"Chrome";s:7:"version";s:13:"59.0.3071.115";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'no'),
+(502, 'disqus_forum_url', 'korpus-dobroyi-voli', 'yes'),
+(503, 'dsq_external_js', '1', 'yes'),
+(504, 'disqus_cc_fix', '1', 'yes'),
+(505, 'disqus_api_key', 'yVNWGBrhT1mxczZEF1b7rz5YZtkivpsgRfgkTEU2S1OGb889b5WpHSkiNXqbJpCs', 'yes'),
+(506, 'disqus_user_api_key', 'DAxKUHCoAi2SFQYqcGO9yuWUhjrVQXPpP7j0lRpAhGEkS60IStDPP31tuwpVvWsQ', 'yes'),
+(507, 'disqus_replace', 'all', 'yes');
 
 -- --------------------------------------------------------
 
@@ -361,7 +367,7 @@ CREATE TABLE IF NOT EXISTS `bt_postmeta` (
   `post_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
   `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB AUTO_INCREMENT=1939 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1940 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
 -- Дамп даних таблиці `bt_postmeta`
@@ -395,7 +401,7 @@ INSERT INTO `bt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (60, 50, '_edit_last', '1'),
 (61, 50, '_edit_lock', '1501513893:1'),
 (83, 69, '_edit_last', '1'),
-(84, 69, '_edit_lock', '1501513896:1'),
+(84, 69, '_edit_lock', '1501792225:1'),
 (85, 72, '_wp_attached_file', '2017/07/family.png'),
 (86, 72, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:440;s:6:"height";i:440;s:4:"file";s:18:"2017/07/family.png";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:18:"family-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:18:"family-300x300.png";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (87, 72, '_wp_attachment_image_alt', 'нація'),
@@ -441,7 +447,7 @@ INSERT INTO `bt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (127, 120, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:610;s:6:"height";i:344;s:4:"file";s:18:"2017/07/845476.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:18:"845476-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:18:"845476-300x169.jpg";s:5:"width";i:300;s:6:"height";i:169;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (128, 119, '_thumbnail_id', '120'),
 (129, 122, '_edit_last', '1'),
-(130, 122, '_edit_lock', '1501512654:1'),
+(130, 122, '_edit_lock', '1501792048:1'),
 (173, 145, '_wp_attached_file', '2017/07/business-partnership.png'),
 (174, 145, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:512;s:6:"height";i:512;s:4:"file";s:32:"2017/07/business-partnership.png";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:32:"business-partnership-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:32:"business-partnership-300x300.png";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (175, 146, '_wp_attached_file', '2017/07/development.png'),
@@ -523,7 +529,7 @@ INSERT INTO `bt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (331, 241, 'slogan', 'Україна понад усе'),
 (332, 241, '_slogan', 'field_596e7b15836ea'),
 (333, 243, '_edit_last', '1'),
-(334, 243, '_edit_lock', '1501139773:1'),
+(334, 243, '_edit_lock', '1501792120:1'),
 (336, 244, 'slogan', 'Україна понад усе'),
 (337, 244, '_slogan', 'field_596e7b15836ea'),
 (338, 243, 'slogan', 'Україна понад усе'),
@@ -565,7 +571,7 @@ INSERT INTO `bt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (385, 257, '_edit_last', '1'),
 (386, 258, '_edit_last', '1'),
 (387, 262, '_edit_last', '1'),
-(388, 262, '_edit_lock', '1501014558:1'),
+(388, 262, '_edit_lock', '1501792147:1'),
 (389, 263, '_wp_attached_file', '2017/07/1.png'),
 (390, 263, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:300;s:6:"height";i:300;s:4:"file";s:13:"2017/07/1.png";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:13:"1-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (391, 262, '_thumbnail_id', '263'),
@@ -971,7 +977,7 @@ INSERT INTO `bt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1064, 548, '_edit_lock', '1501497307:1'),
 (1065, 549, '_edit_last', '1'),
 (1066, 548, '_edit_last', '1'),
-(1067, 547, '_edit_lock', '1501497320:1'),
+(1067, 547, '_edit_lock', '1501792165:1'),
 (1068, 546, '_edit_lock', '1501497319:1'),
 (1069, 546, '_edit_last', '1'),
 (1070, 547, '_edit_last', '1'),
@@ -1180,7 +1186,7 @@ CREATE TABLE IF NOT EXISTS `bt_posts` (
   `post_type` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'post',
   `post_mime_type` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   `comment_count` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=679 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=682 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
 -- Дамп даних таблиці `bt_posts`
@@ -1633,7 +1639,10 @@ INSERT INTO `bt_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (675, 1, '2017-08-01 13:26:20', '2017-08-01 10:26:20', '', 'Стефанюк Олег Володимирович', '', 'publish', 'closed', 'closed', '', 'stefanyuk-oleg-volodymyrovych-36', '', '', '2017-08-01 13:26:20', '2017-08-01 10:26:20', '', 0, 'http://batalion/?post_type=donations&#038;p=675', 0, 'donations', '', 0),
 (676, 1, '2017-08-01 13:26:20', '2017-08-01 10:26:20', '', 'Стефанюк Олег Володимирович', '', 'publish', 'closed', 'closed', '', 'stefanyuk-oleg-volodymyrovych-34', '', '', '2017-08-01 13:26:20', '2017-08-01 10:26:20', '', 0, 'http://batalion/?post_type=donations&#038;p=676', 0, 'donations', '', 0),
 (677, 1, '2017-08-01 13:26:20', '2017-08-01 10:26:20', '', 'Стефанюк Олег Володимирович', '', 'publish', 'closed', 'closed', '', 'stefanyuk-oleg-volodymyrovych-33', '', '', '2017-08-01 13:26:20', '2017-08-01 10:26:20', '', 0, 'http://batalion/?post_type=donations&#038;p=677', 0, 'donations', '', 0),
-(678, 1, '2017-08-02 14:07:50', '0000-00-00 00:00:00', '', 'Авточернетка', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-08-02 14:07:50', '0000-00-00 00:00:00', '', 0, 'http://batalion/?p=678', 0, 'post', '', 0);
+(678, 1, '2017-08-02 14:07:50', '0000-00-00 00:00:00', '', 'Авточернетка', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-08-02 14:07:50', '0000-00-00 00:00:00', '', 0, 'http://batalion/?p=678', 0, 'post', '', 0),
+(679, 1, '2017-08-03 23:28:18', '0000-00-00 00:00:00', '', 'Авточернетка', '', 'auto-draft', 'open', 'closed', '', '', '', '', '2017-08-03 23:28:18', '0000-00-00 00:00:00', '', 0, 'http://batalion/?post_type=events&p=679', 0, 'events', '', 0),
+(680, 1, '2017-08-03 23:28:44', '0000-00-00 00:00:00', '', 'Авточернетка', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-08-03 23:28:44', '0000-00-00 00:00:00', '', 0, 'http://batalion/?post_type=library&p=680', 0, 'library', '', 0),
+(681, 1, '2017-08-03 23:30:07', '0000-00-00 00:00:00', '', 'Авточернетка', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-08-03 23:30:07', '0000-00-00 00:00:00', '', 0, 'http://batalion/?post_type=donations&p=681', 0, 'donations', '', 0);
 
 -- --------------------------------------------------------
 
@@ -1783,7 +1792,7 @@ INSERT INTO `bt_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (12, 1, 'bt_user_level', '10'),
 (13, 1, 'dismissed_wp_pointers', ''),
 (14, 1, 'show_welcome_panel', '0'),
-(15, 1, 'session_tokens', 'a:2:{s:64:"02c161006042af5346503033e379f7b66306fef4c762c80673b7472e44795e18";a:4:{s:10:"expiration";i:1501951603;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36";s:5:"login";i:1501778803;}s:64:"a15b38d8ab509ffab4b28e75c9bedd239e755d06794fffe4966a43677263130d";a:4:{s:10:"expiration";i:1501951968;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:73:"Mozilla/5.0 (Windows NT 10.0; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0";s:5:"login";i:1501779168;}}'),
+(15, 1, 'session_tokens', 'a:4:{s:64:"02c161006042af5346503033e379f7b66306fef4c762c80673b7472e44795e18";a:4:{s:10:"expiration";i:1501951603;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36";s:5:"login";i:1501778803;}s:64:"a15b38d8ab509ffab4b28e75c9bedd239e755d06794fffe4966a43677263130d";a:4:{s:10:"expiration";i:1501951968;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:73:"Mozilla/5.0 (Windows NT 10.0; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0";s:5:"login";i:1501779168;}s:64:"39c81926356adf90c25f89e18311c8955e5039df7abd31a90ce2defeeecf3efc";a:4:{s:10:"expiration";i:1501964513;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:114:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36";s:5:"login";i:1501791713;}s:64:"3e1f0fb0c12bf1248eca17fe7c0d43f1f136eaa4e472a07568adacf7c577a8a8";a:4:{s:10:"expiration";i:1501964850;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:114:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36";s:5:"login";i:1501792050;}}'),
 (16, 1, 'bt_dashboard_quick_press_last_post_id', '678'),
 (17, 1, 'community-events-location', 'a:1:{s:2:"ip";s:9:"127.0.0.0";}'),
 (18, 1, 'meta-box-order_tasks', 'a:4:{s:15:"acf_after_title";s:12:"acf_5,acf_14";s:4:"side";s:9:"submitdiv";s:6:"normal";s:27:"acf_11,slugdiv,postimagediv";s:8:"advanced";s:0:"";}'),
@@ -2075,17 +2084,17 @@ ALTER TABLE `bt_links`
 -- AUTO_INCREMENT для таблиці `bt_options`
 --
 ALTER TABLE `bt_options`
-  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=500;
+  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=510;
 --
 -- AUTO_INCREMENT для таблиці `bt_postmeta`
 --
 ALTER TABLE `bt_postmeta`
-  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1939;
+  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1940;
 --
 -- AUTO_INCREMENT для таблиці `bt_posts`
 --
 ALTER TABLE `bt_posts`
-  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=679;
+  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=682;
 --
 -- AUTO_INCREMENT для таблиці `bt_termmeta`
 --

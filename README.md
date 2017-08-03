@@ -1,4 +1,7 @@
 # batalion
+ver. 0.9
+  - видалив календар
+  - змінив розмір таблиці Внесни/Пожертвування
 
 ver. 0.8.9
   - змінив reCAPTCHA V2 на Invisible reCAPTCHA

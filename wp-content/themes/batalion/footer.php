@@ -54,7 +54,7 @@
     $('ul.tabs').tabs();
   });
 </script>
-<script>
+<!-- <script>
   $("#airdatepicker").data('datepicker')
 </script>
 <script>
@@ -62,7 +62,7 @@
     view: "months",
     minView: "months",
   })
-</script>
+</script> -->
 
 <?php
 if ( is_home() ) {

@@ -3,14 +3,15 @@ jQuery(function($) {
     var data = {
       'action': 'loadmore',
       'query': events_true_posts,
-      'page': events_current_page
+      'page': events_current_page,
+      'post_type': events_post_type
     };
     $.ajax({
       url: events_ajaxurl, // обработчик
       data: data, // данные
       type: 'POST', // тип запроса
       beforeSend: function() {
-        $(this).text('Завантаження...'); // изменяем текст кнопки, вы также можете добавить прелоадер
+        $('#events_loadmore').text('Завантаження...'); // изменяем текст кнопки, вы также можете добавить прелоадер
       },
       success: function(data) {
         if ( data ) { 
@@ -29,14 +30,15 @@ jQuery(function($) {
     var data = {
       'action': 'loadmore',
       'query': blogs_true_posts,
-      'page': blogs_current_page
+      'page': blogs_current_page,
+      'post_type': blogs_post_type
     };
     $.ajax({
       url: blogs_ajaxurl, // обработчик
       data: data, // данные
       type: 'POST', // тип запроса
       beforeSend: function() {
-        $(this).text('Завантаження...'); // изменяем текст кнопки, вы также можете добавить прелоадер
+        $('#blogs_loadmore').text('Завантаження...'); // изменяем текст кнопки, вы также можете добавить прелоадер
       },
       success:function(data) {
         if ( data ) { 
@@ -51,44 +53,19 @@ jQuery(function($) {
     });
   });
 
-  $('#discussions_loadmore').click(function() {
-    var data = {
-      'action': 'loadmore',
-      'query': discussions_true_posts,
-      'page': discussions_current_page
-    };
-    $.ajax({
-      url: discussions_ajaxurl, // обработчик
-      data: data, // данные
-      type: 'POST', // тип запроса
-      beforeSend: function() {
-        $(this).text('Завантаження...'); // изменяем текст кнопки, вы также можете добавить прелоадер
-      },
-      success:function(data) {
-        if ( data ) { 
-          $('#discussions_loadmore').text('Більше тем').before(data); // вставляем новые посты
-          discussions_current_page++; // увеличиваем номер страницы на единицу
-          if (discussions_current_page == discussions_max_pages) $("#discussions_loadmore").remove(); // если последняя страница, удаляем кнопку
-        }
-        else {
-          $('#discussions_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
-        }
-      }
-    });
-  });
-
   $('#library_loadmore').click(function() {
     var data = {
       'action': 'loadmore',
       'query': library_true_posts,
-      'page': library_current_page
+      'page': library_current_page,
+      'post_type': library_post_type
     };
     $.ajax({
       url: library_ajaxurl, // обработчик
       data: data, // данные
       type: 'POST', // тип запроса
       beforeSend: function() {
-        $(this).text('Завантаження...'); // изменяем текст кнопки, вы также можете добавить прелоадер
+        $('#library_loadmore').text('Завантаження...'); // изменяем текст кнопки, вы также можете добавить прелоадер
       },
       success: function(data) {
         if ( data ) { 
@@ -103,27 +80,84 @@ jQuery(function($) {
     });
   });
 
-  $('.datepicker--cell').click(function() {
+  $('#discussions_loadmore').click(function() {
     var data = {
       'action': 'loadmore',
-      'year': $('.datepicker--nav-title').text(),
-      'month': $(this).attr("data-month"),
-      'post_type': post_type
+      'query': discussions_true_posts,
+      'page': discussions_current_page,
+      'post_type': discussions_post_type
+    };
+    $.ajax({
+      url: discussions_ajaxurl, // обработчик
+      data: data, // данные
+      type: 'POST', // тип запроса
+      beforeSend: function() {
+        $('#discussions_loadmore').text('Завантаження...'); // изменяем текст кнопки, вы также можете добавить прелоадер
+      },
+      success:function(data) {
+        if ( data ) { 
+          $('#discussions_loadmore').text('Більше тем').before(data); // вставляем новые посты
+          discussions_current_page++; // увеличиваем номер страницы на единицу
+          if (discussions_current_page == discussions_max_pages) $("#discussions_loadmore").remove(); // если последняя страница, удаляем кнопку
+        }
+        else {
+          $('#discussions_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
+        }
+      }
+    });
+  });
+
+  $('#contributions_loadmore').click(function() {
+    var data = {
+      'action': 'loadmore',
+      'query': contributions_true_posts,
+      'page': contributions_current_page,
+      'post_type': contributions_post_type
+    };
+    $.ajax({
+      url: contributions_ajaxurl, // обработчик
+      data: data, // данные
+      type: 'POST', // тип запроса
+      beforeSend: function() {
+        $('#contributions_loadmore').text('Завантаження...'); // изменяем текст кнопки, вы также можете добавить прелоадер
+      },
+      success: function(data) {
+        if ( data ) {
+          $('#contributions_loadmore').text('Більше внесків');
+          $('#contributions-table').append(data); // вставляем новые посты
+          contributions_current_page++; // увеличиваем номер страницы на единицу
+          if (contributions_current_page == contributions_max_pages) $("#contributions_loadmore").remove(); // если последняя страница, удаляем кнопку
+        }
+        else {
+          $('#contributions_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
+        }
+      }
+    });
+  });
+
+  $('#donations_loadmore').click(function() {
+    var data = {
+      'action': 'loadmore',
+      'query': donations_true_posts,
+      'page': donations_current_page,
+      'post_type': donations_post_type
     };
     $.ajax({
       url: donations_ajaxurl, // обработчик
       data: data, // данные
-      //dataType: 'json',
       type: 'POST', // тип запроса
+      beforeSend: function() {
+        $('#donations_loadmore').text('Завантаження...'); // изменяем текст кнопки, вы также можете добавить прелоадер
+      },
       success: function(data) {
-        if (data) {
-          console.log(data);
-          /*
-          $('#donations-table').html("");
-          $('#contributions-table-table').html("");
-          $('#donations-table').html(data[0]);
-          $('#contributions-table').html(data[0]);
-          */
+        if ( data ) {
+          $('#donations_loadmore').text('Більше пожертвувань');
+          $('#donations-table').append(data); // вставляем новые посты
+          donations_current_page++; // увеличиваем номер страницы на единицу
+          if (donations_current_page == donations_max_pages) $("#donations_loadmore").remove(); // если последняя страница, удаляем кнопку
+        }
+        else {
+          $('#donations_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
         }
       }
     });

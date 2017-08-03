@@ -32,6 +32,7 @@
           var blogs_true_posts = '<?php echo serialize( $query->query_vars ); ?>';
           var blogs_current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
           var blogs_max_pages = '<?php echo $query->max_num_pages; ?>';
+          var blogs_post_type = "blogs";
         </script>
         <div id="blogs_loadmore" class="offset-l3 offset-m3 offset-s3 col l6 m6 s6 center btn more-btn red">Більше блогів</div>
         <!--<a class="waves-effect waves-light btn more-btn red">Більше блогів</a>-->

@@ -1,7 +1,7 @@
 <?php
 	$question_text = trim($_POST["question_text"]);
 	
-	$recepient = "xxxmechanikxxx@gmail.com";
+	$recepient = "goodwillcorps.info@gmail.com";
 	$sitename = "КОРПУС ДОБРОЇ ВОЛІ";
 
 	$message = "Запитання: $question_text";

@@ -50,6 +50,7 @@
             var events_true_posts = '<?php echo serialize( $query->query_vars ); ?>';
             var events_current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
             var events_max_pages = '<?php echo $query->max_num_pages; ?>';
+            var events_post_type = "events";
           </script>
           <div id="events_loadmore" class="offset-l3 offset-m3 offset-s3 col l6 m6 s6 center btn more-btn red">Більше подій</div>
           <!--<a class="waves-effect waves-light btn more-btn red">Більше новин</a>-->

@@ -142,6 +142,17 @@
   <?php
   }
 
+  //template for display donations
+  function display_donations_temp() {
+    global $post; ?>
+    <tr>
+      <td><?php echo get_the_date('d.m.Y'); ?></td>
+      <td><?php the_title(); ?></td>
+      <td><?php echo get_post_meta( $post->ID, "payment_amount", true ); ?> грн.</td>
+    </tr>
+  <?php
+  }
+
 
 //hide not used fields
   function remove_menus() {

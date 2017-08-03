@@ -30,6 +30,7 @@
               var discussions_true_posts = '<?php echo serialize( $query->query_vars ); ?>';
               var discussions_current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
               var discussions_max_pages = '<?php echo $query->max_num_pages; ?>';
+              var discussions_post_type = "discussions";
             </script>
             <div id="discussions_loadmore" class="offset-l3 offset-m3 offset-s3 col l6 m6 s6 center btn more-btn red">Більше тем</div>
             <!--<a class="waves-effect waves-light btn more-btn red">Більше тем</a>-->

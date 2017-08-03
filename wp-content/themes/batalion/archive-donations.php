@@ -24,21 +24,10 @@
         //Членські внески
         $args = array(
           'post_type' => 'donations',
-          'posts_per_page' => -1, //вивести усі пости
+          'posts_per_page' => 10, //вивести усі пости
           'category_name' => 'contributions',
-          'year' => date('Y'),
-          'monthnum' => date('m'),
-          /*
-          'meta_query' => array(
-            'payment_date' => array(
-              'key' => 'payment_date',
-              'value' => array('20170708', '20170710'),
-              'compare' => 'BETWEEN',
-            ),
-          ),
-          */
           'publish' => true,
-          'orderby' => 'payment_date',
+          'orderby' => 'date',
           'order' => 'DESC'
         );
         
@@ -55,17 +44,25 @@
               </thead>
               <tbody id="contributions-table">
               <?php
-              while ( $query->have_posts() ) {
-                $query->the_post(); ?>
-                <tr>
-                  <td>17.01.2017</td>
-                  <td><?php the_title(); ?></td>
-                  <td><?php echo get_post_meta( $post->ID, "payment_amount", true ); ?> грн.</td>
-                </tr>
-                <?php
-              } //end while ?>
+                while ( $query->have_posts() ) {
+                  $query->the_post();
+                  display_donations_temp();
+                } //end while
+              ?>
               </tbody>
             </table>
+            <?php
+              if ( $query->max_num_pages > 1 ) { ?>
+                <script>
+                  var contributions_ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
+                  var contributions_true_posts = '<?php echo serialize( $query->query_vars ); ?>';
+                  var contributions_current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
+                  var contributions_max_pages = '<?php echo $query->max_num_pages; ?>';
+                  var contributions_post_type = "donations";
+                </script>
+                <div id="contributions_loadmore" class="offset-l3 offset-m3 offset-s3 col l6 m6 s6 center btn more-btn red">Більше внесків</div>
+                <!--<a class="waves-effect waves-light btn more-btn red">Більше тем</a>-->
+            <?php } //end if ?>
           </div>
         <?php
         } //end if
@@ -74,10 +71,8 @@
         //Пожертвування
         $args = array(
           'post_type' => 'donations',
-          'posts_per_page' => -1, //вивести усі пости
+          'posts_per_page' => 10, //вивести усі пости
           'category_name' => 'donations',
-          'year' => date('Y'),
-          'monthnum' => date('m'),
           'publish' => true,
           'orderby' => 'date',
           'order' => 'DESC'
@@ -95,17 +90,25 @@
               </thead>
               <tbody id="donations-table">
               <?php
-              while ( $query->have_posts() ) {
-                $query->the_post(); ?>
-                <tr>
-                  <td>17.01.2017</td>
-                  <td><?php the_title(); ?></td>
-                  <td><?php echo get_post_meta( $post->ID, "payment_amount", true ); ?> грн.</td>
-                </tr>
-              <?php
-              } //end while ?>
+                while ( $query->have_posts() ) {
+                  $query->the_post();
+                  display_donations_temp();
+                } //end while
+              ?>
               </tbody>
             </table>
+            <?php
+              if ( $query->max_num_pages > 1 ) { ?>
+                <script>
+                  var donations_ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
+                  var donations_true_posts = '<?php echo serialize( $query->query_vars ); ?>';
+                  var donations_current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
+                  var donations_max_pages = '<?php echo $query->max_num_pages; ?>';
+                  var donations_post_type = "donations";
+                </script>
+                <div id="donations_loadmore" class="offset-l3 offset-m3 offset-s3 col l6 m6 s6 center btn more-btn red">Більше пожертвувань</div>
+                <!--<a class="waves-effect waves-light btn more-btn red">Більше тем</a>-->
+            <?php } //end if ?>
           </div>
         <?php
         } //end if
@@ -117,11 +120,6 @@
     </div>
   </div>
 </section>
-
-<script>
-  var donations_ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
-  var post_type = "donations";
-</script>
 
 <?php
   //our team

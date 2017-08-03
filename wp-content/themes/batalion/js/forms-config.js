@@ -1,44 +1,63 @@
 $(document).ready(function() {
+  
   $("#callback-form").submit(function(event) {
     event.preventDefault(); // Cancel the submit
-    var siteUrl = window.location.origin;
+    var
+      siteUrl = window.location.origin,
+      submitButton = $('#callback-button1'),
+      form = $(this);
+
     $.ajax ({
       url: siteUrl + "/wp-content/themes/batalion/template-parts/forms/callback-form.php",
-      type: "POST",
-      data: $("#callback-form").serialize(),
-      dataType: "html",
+      data: form.serialize(),
+      method: "POST",
       beforeSend: function() {
-        $("#callback-button1").html("Зачекайте...");
+        submitButton.text("Зачекайте...");
       },
-      success: function(data) {
-        $("#callback-button1").html("Надіслати");
-        if (data.trim() == "Відправлено") {
+      success: function(response) {
+        submitButton.text("Надіслати заявку");
+        if (response.trim() == "Відправлено") {
           grecaptcha.reset();
-          $("#callback-form")[0].reset();
+          form[0].reset();
+          alert("Відправлено");
+          $("#callback-form-message").html("");
+          return;
         }
-        $("#callback-form-message").html(data);
+        $("#callback-form-message").html(response);
+      },
+      error: function() {
+        alert("Перевірте підключення до Інтернету");
       }
     });
   });
 
   $("#question-form").submit(function(event) {
     event.preventDefault(); // Cancel the submit
-    var siteUrl = window.location.origin;
+    var
+      siteUrl = window.location.origin,
+      submitButton = $('#question-form-button'),
+      form = $(this);
+
     $.ajax ({
       url: siteUrl + "/wp-content/themes/batalion/template-parts/forms/question-form.php",
-      type: "POST",
-      data: $("#question-form").serialize(),
-      dataType: "html",
+      data: form.serialize(),
+      method: "POST",
       beforeSend: function() {
-        $("#question-form-button").html("Зачекайте...");
+        submitButton.text("Зачекайте...");
       },
-      success: function(data) {
-        $("#question-form-button").html("Надіслати");
-        if (data.trim() == "Відправлено") {
+      success: function(response) {
+        submitButton.text("Надіслати");
+        if (response.trim() == "Відправлено") {
           grecaptcha.reset();
-          $("#question-form")[0].reset();
+          form[0].reset();
+          alert("Відправлено");
+           $("#question-form-message").html("");
+          return;
         }
-        $("#question-form-message").html(data);
+        $("#question-form-message").html(response);
+      },
+      error: function() {
+        alert("Перевірте підключення до Інтернету");
       }
     });
   });

@@ -38,13 +38,14 @@
         <input class="application-field" type="tel" name="user_phone" placeholder="Номер телефону" required /><br />
         <input class="application-field" type="email" name="user_email" placeholder="E-mail" required /><br />
         <input class="application-field" type="number" name="user_age" min="15" placeholder="Ваш вік" required /><br />
-        <?php /*
-          reCAPTCHA V2
-          <div class="g-recaptcha" data-sitekey="6Ld1jysUAAAAAN5vTUiLkkEZO7fHM5WmApT6WNHc"></div> */
+        <div class="g-recaptcha" data-sitekey="6Ld1jysUAAAAAN5vTUiLkkEZO7fHM5WmApT6WNHc"></div>
+        <?php
+          /*
+          reCAPTCHA invisible
+          <button id="callback-button1" class="applicationButton g-recaptcha" data-sitekey="6LdEqCsUAAAAAJlJ39G6oBOLcdWL6lFlmBDpgTHO" data-callback="after_invis_activated">
+          */
         ?>
-        <button id="callback-button1" class="applicationButton" class="g-recaptcha" data-sitekey="6LdEqCsUAAAAAJlJ39G6oBOLcdWL6lFlmBDpgTHO" data-callback="YourOnSubmitFn"
-          >НАДІСЛАТИ ЗАЯВКУ
-        </button>
+        <button id="callback-button1" class="applicationButton">НАДІСЛАТИ ЗАЯВКУ</button>
       </form>
       <span id="callback-form-message"></span>
     </div>

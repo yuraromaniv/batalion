@@ -1,4 +1,9 @@
 # batalion
+
+ver. 0.9.1
+  - відновив reCAPTCHA V2
+  - виправив кілька багів у формах
+
 ver. 0.9
   - видалив календар
   - змінив розмір таблиці Внесни/Пожертвування
@@ -7,7 +12,7 @@ ver. 0.8.9
   - змінив reCAPTCHA V2 на Invisible reCAPTCHA
   - встановив плагіни:
     - Limit Login Attempts Reloaded - ліміт кількості логувань
-    - Rename wp-login.php - зміна url форми логування
+    - Rename wp-login.php - зміна url форми логування ("/cpanel" замість "/admin")
 
 ver. 0.8.8
   - функціонал сторінки "Внески та пожертвування"

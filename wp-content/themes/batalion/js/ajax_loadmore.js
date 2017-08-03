@@ -22,6 +22,9 @@ jQuery(function($) {
         else {
           $('#events_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
         }
+      },
+      error: function() {
+        alert("Перевірте підключення до Інтернету");
       }
     });
   });
@@ -49,6 +52,9 @@ jQuery(function($) {
         else {
           $('#blogs_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
         }
+      },
+      error: function() {
+        alert("Перевірте підключення до Інтернету");
       }
     });
   });
@@ -76,6 +82,9 @@ jQuery(function($) {
         else {
           $('#library_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
         }
+      },
+      error: function() {
+        alert("Перевірте підключення до Інтернету");
       }
     });
   });
@@ -103,6 +112,9 @@ jQuery(function($) {
         else {
           $('#discussions_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
         }
+      },
+      error: function() {
+        alert("Перевірте підключення до Інтернету");
       }
     });
   });
@@ -131,6 +143,9 @@ jQuery(function($) {
         else {
           $('#contributions_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
         }
+      },
+      error: function() {
+        alert("Перевірте підключення до Інтернету");
       }
     });
   });
@@ -159,6 +174,9 @@ jQuery(function($) {
         else {
           $('#donations_loadmore').remove(); // если мы дошли до последней страницы постов, скроем кнопку
         }
+      },
+      error: function() {
+        alert("Перевірте підключення до Інтернету");
       }
     });
   });

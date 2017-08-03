@@ -22,7 +22,7 @@
         <div class="contacts">КОНТАКТИ:</div>
         <div class="address">вул. Львівська, 1 </div>
         <div class="address">тел.: +38(067) 000 00 00</div>
-        <div class="address">e-mail: yura.stefamiuk@hotmail.info</div>
+        <div class="address">e-mail: goodwillcorps.info@gmail.com</div>
       </div>
     </div>
   </div>

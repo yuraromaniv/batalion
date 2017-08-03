@@ -154,7 +154,7 @@
   }
 
 
-//hide not used fields
+  //hide not used fields
   function remove_menus() {
     remove_menu_page( 'edit.php' );                     //Записи
     //remove_menu_page( 'edit.php?post_type=page' );    //Сторінки
@@ -169,6 +169,19 @@
     //remove_menu_page( 'options-general.php' );        //Налаштування
   }
   add_action( 'admin_menu', 'remove_menus' );
-//end hide not used fields
+
+
+  //Замінити посилання під логотипом на сторінці входу адміністратора
+	function gb_custom_loginlogo_url( $url ) {
+	  return home_url();
+  }
+	add_filter( 'login_headerurl', 'gb_custom_loginlogo_url' ); 
+
+	//Замінити заголовок логотипу на сторінці входу адміністративної області
+	function gb_custom_loginlogo_title( $url ) {
+	  return 'КОРПУС ДОБРОЇ ВОЛІ';
+  }
+	add_filter( 'login_headertitle', 'gb_custom_loginlogo_title' )
+
 
 ?>

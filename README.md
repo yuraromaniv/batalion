@@ -1,5 +1,11 @@
 # batalion
 
+ver. 0.8.9
+  - змінив reCAPTCHA V2 на Invisible reCAPTCHA
+  - встановив плагіни:
+    - Limit Login Attempts Reloaded - ліміт кількості логувань
+    - Rename wp-login.php - зміна url форми логування
+
 ver. 0.8.8
   - функціонал сторінки "Внески та пожертвування"
   - підключив його пошту до:

@@ -19,7 +19,7 @@
         while ( $query->have_posts() ) {
           $query->the_post(); ?>
           <div class="col l4 m4 s12">
-            <img class="member-img" src="<?php the_post_thumbnail_url('' ,'medium'); ?>" alt="<?php the_title(); ?>">
+            <img class="member-img" src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>">
             <div class="member-name"><?php echo short_post_title(100); ?></div>
             <div class="member-desc"> 
               <?php echo get_post_meta( $post->ID, "slogan", true ); ?>

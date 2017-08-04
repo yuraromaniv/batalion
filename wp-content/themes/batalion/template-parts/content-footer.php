@@ -18,7 +18,7 @@
           while ( $query->have_posts() ) {
             $query->the_post(); ?>
             <a class="carousel-item" target="_blank" href="<?php echo get_post_meta( $post->ID, "link_to_partner", true ); ?>">
-              <img src="<?php the_post_thumbnail_url('' ,'medium'); ?>" alt="<?php the_title(); ?>">
+              <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>">
             </a>
           <?php
           } //end while

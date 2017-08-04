@@ -16,7 +16,7 @@
           $query->the_post(); ?>
           <div>
             <a href="<?php the_permalink(); ?>">
-              <img data-u="image" alt="<?php the_title(); ?>" src="<?php the_post_thumbnail_url('' ,'full'); ?>" />
+              <img data-u="image" alt="<?php the_title(); ?>" src="<?php the_post_thumbnail_url('full'); ?>" />
               <div class="mask center">
                 <div class="ph-name-slider"><?php echo short_post_title(40); ?></div>
               </div>
@@ -67,7 +67,7 @@
           $query->the_post(); ?>
           <div class="task-block">
             <div class="task-img">
-              <img class="task-img-max-width" src="<?php the_post_thumbnail_url('' ,'thumbnail'); ?>" alt="<?php the_title(); ?>">
+              <img class="task-img-max-width" src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="<?php the_title(); ?>">
             </div>
             <div class="task-desc center"><?php echo short_post_title(140); ?></div>
           </div>
